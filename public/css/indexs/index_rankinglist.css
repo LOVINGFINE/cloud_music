@@ -1,0 +1,297 @@
+
+
+
+.main_rankinglist_left {
+    width: 240px;
+    background-color: rgb(248, 248, 248);
+    padding-top: 40px;
+    float: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    box-sizing: border-box;
+}
+
+.main_rankinglist_left h2 {
+    font-family: "songti";
+    font-size: 14px;
+    padding: 0 10px 12px 15px;
+}
+
+.main_rankinglist_left .h2-two {
+    margin-top: 20px;
+}
+
+.hot_rankinglist li,
+.other_rankinglist li {
+    height: 62px;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.hot_rankinglist li a:hover,
+.other_rankinglist li a:hover {
+    text-decoration: none;
+}
+
+/* 点击变类名 */
+.hot_rankinglist .gbc_hot_li {
+    background-color: #E6E6E6;
+}
+
+.hot_left_img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.hot_left_p {
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.hot_left_span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.hot_rankinglist li:hover {
+    background-color: rgb(235, 231, 231);
+}
+
+.other_rankinglist li:hover {
+    background-color: rgb(235, 231, 231);
+}
+
+
+
+.main_rankinglist_right {
+    float: right;
+    width: 740px;
+    padding-bottom: 30px;
+    border-left: #D3D3D3 1px solid;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    box-sizing: border-box;
+}
+
+.ranklist_title {
+    width: 660px;
+    height: 155px;
+    margin: 40px;
+}
+#ranklist_titleImg {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+#titleImg {
+    width: 150px;
+    height: 150px;
+}
+.ranklist_messageMain {
+    float: right;
+    width: 473px;
+    height: 114px;
+    margin-top: 20px;
+}
+#ranklist_name {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #333333;
+}
+.ranklist_messageMain_date {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.ranklist_changeData {
+    width: 100%;
+    height: 33px;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+#changeData_play,
+#changeData_add {
+    margin-top: 2px;
+    height: 31px;
+    float: left;
+    text-align: center;
+    border-style: none;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: aliceblue;
+    background-color: rgb(12, 82, 235);
+    cursor: pointer;
+}
+#changeData_play {
+    width: 66px;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+#changeData_play:hover {
+    background-color: rgba(12, 82, 235,0.8);
+}
+#changeData_add {
+    width: 31px;
+    border-radius: 0 5px 5px 0;
+}
+#changeData_add:hover {
+    background-color: rgba(12, 82, 235,0.8);
+}
+
+#changeData_coll {
+     width: 84px;
+}
+#changeData_share {
+    width: 66px;
+}
+#changeData_download {
+    width: 54px;
+}
+#changeData_comments {
+    width: 78px;
+}
+.ranklist_body_right {
+    width: 670px;
+    margin: 0 40px 0;
+}
+.ranklist_body_header {
+    height: 32px;
+    width: 100%;
+    line-height: 32px;
+    border-bottom: 3px solid rgb(165, 18, 18);
+}
+.ranklist_body_header h2 {
+    display: inline;
+    font-size: 20px;
+}
+.ranklist_allSongs {
+    font-size: 12px;
+    display: inline;
+    margin-left: 25px;
+    color: #666;
+}
+.ranklist_playTimes {
+    float: right;
+    font-size: 12px;
+    color: #666;
+}
+#ranklist_playTimes {
+    color: #eb1010;
+}
+.ranklist_body_main {
+    width: 668px;
+    margin-bottom: 30px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.ranklist_body_main_1,
+.ranklist_body_main_2,
+.ranklist_body_main_3,
+.ranklist_body_main_4 {
+    float: left;
+    height: 22px;
+    line-height: 27px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 22px;
+    background-color: rgb(235, 243, 242);
+    border-bottom: #ccc 1px solid;
+}
+.ranklist_body_main_1,
+.ranklist_body_main_2,
+.ranklist_body_main_3 {
+    border-right: 1px solid #ccc;
+}
+.ranklist_body_main_1 {
+    width: 57px;
+}
+.ranklist_body_main_2 {
+    width: 302px;
+}
+.ranklist_body_main_3 {
+    width: 71px;
+}
+.ranklist_body_main_4 {
+    width: 155px;
+}
+#ranklist_bodyData {
+    float: left;
+    width: 668px;
+}
+
+#ranklist_bodyData img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+#ranklist_bodyData li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333333;
+}
+#ranklist_bodyData li:nth-child(2n-1) {
+    background-color: rgb(243, 241, 241);
+}
+#ranklist_bodyData li:last-child {
+    border-bottom: #ccc 1px solid;
+}
+#ranklist_bodyData li i {
+    display: inline-block;
+}
+#ranklist_bodyData .ranklist_bodyData_top {
+    height: 70px;
+    line-height: 70px;
+}
+#ranklist_bodyData .songDataIndex {
+    width: 70px;
+    margin: 0 0 0 10px;
+    float: left;
+}
+#ranklist_bodyData .ranklist_body_play {
+    font-size: 18px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+#ranklist_bodyData .ranklist_body_play:hover {
+    text-decoration: none;
+    color: rgb(158, 46, 46);
+}
+#ranklist_bodyData .songDataName {
+    font-size: 12px;
+    color: #333;
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+#ranklist_bodyData .songDateTime {
+    width: 91px;
+    float: right;
+}
+#ranklist_bodyData .songDataNickname {
+    font-size: 12px;
+    color: #333;
+    float: right;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,317 @@
+
+/******************* 主页全部歌单页  ********************/
+
+
+.main_musiclist_top {
+    width: 900px;
+    height: 42px;
+    border-bottom: #9b0909 2px solid;
+    margin: 40px;
+}
+
+.main_musiclist_top span {
+    font-size: 24px;
+}
+
+.main_musiclist_top .musiclist_hot {
+    font-size: 12px;
+    float: right;
+    border: #630606 1px solid;
+    border-radius: 3px;
+    background-color: #9b0909;
+    width: 44px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    color: #fff;
+}
+
+#musiclistClass_name {
+    float: left;
+    line-height: 42px;
+}
+
+.main_musiclist_top #musiclist_chice {
+    width: 89px;
+    height: 29px;
+    display: inline-block;
+    background-color: rgb(246, 245, 245);
+    line-height: 29px;
+    border: #ccc 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(12, 71, 180);
+    font-size: 12px;
+    margin: 6px 15px;
+}
+
+.main_musiclist_top #musiclist_chice:hover {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.main_musiclist_top #musiclist_chice span {
+    font-family: 'icomoon';
+    font-size: 8px;
+}
+
+.main_musiclist_all {
+    width: 900px;
+    margin: 0 40px 80px;
+}
+.main_musiclist_all li {
+    float: left;
+    margin: 0 50px 30px 0;
+}
+
+.main_musiclist_all li:nth-child(5n) {
+    margin: 0 0 30px;
+}
+
+.musiclist_play .musiclist_bottom {
+    position: absolute;
+    bottom: 40px;
+    width: 138px;
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.musiclist_play .musiclist_bottom span,
+.musiclist_play .musiclist_bottom a {
+    font-family: 'icomoon';
+    color: #CCC;
+}
+
+.musiclist_play .musiclist_bottom span {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.musiclist_play .musiclist_bottom a {
+    float: right;
+    font-size: 16px;
+    margin: 5px 8px 0 0;
+}
+
+.musiclist_play .musiclist_bottom a:hover {
+    color: #fff;
+}
+
+.musiclist_play {
+    position: relative;
+}
+
+.musiclist_play .musiclist_play_img {
+    width: 140px;
+    height: 140px;
+}
+
+.musiclist_play .musiclist_name {
+    display: block;
+    width: 140px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.musiclist_play .musiclist_nickname {
+    display: block;
+    width: 140px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #666;
+}
+
+/*  分页管理 */
+.m_pageChange {
+    width: 500px;
+    height: 26px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.pageNumber {
+    float: left;
+    padding: 0 8px;
+    line-height: 24px;
+    border: rgb(207, 207, 207) 1px solid;
+    border-radius: 4px;
+    margin-left: 5px;
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#pageNumber_pic {
+    margin-left: 0;
+}
+
+
+#pageDots_min,
+#pageDots_max {
+    float: left;
+    padding: 0;
+    margin: 0;
+    color: rgb(141, 140, 140);
+}
+
+.pageNumber:hover {
+    border-color: rgb(90, 89, 89);
+}
+
+#m_changeNext,
+#m_changePrev {
+    background-color: rgb(241, 240, 240);
+    border-style: none;
+    float: left;
+    width: 71px;
+    height: 26px;
+    line-height: 26px;
+    border: rgb(187, 185, 185) 1px solid;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#m_changePrev:hover {
+    background-color: rgb(226, 223, 223);
+}
+
+#m_changeNext:hover {
+    background-color: rgb(226, 223, 223);
+}
+
+/* 分类框 */
+#musiclist_classAllBox {
+    width: 700px;
+    height: 400px;
+    background-color: rgba(19, 18, 18, 0.9);
+    border: #D3D3D3 1px solid;
+    border-radius: 4px;
+    box-shadow: -2px 2px 2px #666;
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+    display: none;
+}
+
+#optBox {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    background-color: rgba(251, 248, 248, 0);
+}
+
+.musiclist_classAllOne {
+    width: 100%;
+    height: 38px;
+    border-bottom: 2px solid rgba(7, 7, 7, 0.6);
+}
+
+#musiclist_classAll {
+    font-size: 14px;
+    font-weight: 600px;
+    color: rgb(90, 7, 7);
+    display: block;
+    width: 75px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: rgba(221, 221, 221, 0.7);
+    margin: 10px 0 0 35px;
+}
+
+#musiclist_classAll:hover {
+    text-decoration: none;
+    background-color: rgb(243, 237, 237);
+}
+
+.musiclist_classAllBody {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.musiclist_class {
+    width: 100%;
+}
+
+.musilist_classTitle {
+    font-size: 14px;
+    font-weight: 700px;
+    color: rgb(143, 141, 141);
+    float: left;
+    width: 75px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.musilist_classTitle span {
+    float: left;
+    height: 100%;
+    line-height: 40px;
+    color: rgb(136, 135, 135);
+}
+
+.classRightLink_one {
+    height: 40px;
+    padding-top: 16px;
+
+}
+
+.classRightLink_ul {
+    padding: 15px 0 0 5px;
+    box-sizing: border-box;
+    width: 604px;
+    float: left;
+    border-left: 1px solid rgba(42, 42, 42, 0.6);
+    box-sizing: border-box;
+}
+
+#classRightLink_one {
+    height: 41px;
+}
+
+.musicLink_item {
+    margin-bottom: 13px;
+    float: left;
+}
+
+.musicClass_itemIink {
+    display: block;
+    padding: 0 13px;
+    color: rgb(195, 194, 194);
+    border-right: 1px solid rgba(110, 6, 6, 0.6);
+}
+
+.musicClass_itemIink:hover {
+    color: rgb(110, 6, 6);
+    text-decoration: solid underline rgb(110, 6, 6);
+}
+
+#classRightLink_two {
+    height: 98px;
+}
+
+#classRightLink_four {
+    height: 64px;
+}
+
+#classRightLink_five {
+    height: 68px;
+}

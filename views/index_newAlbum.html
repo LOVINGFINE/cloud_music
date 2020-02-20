@@ -1,0 +1,84 @@
+<!----------------- 主页新碟部分 ----------------->
+    <main class="clearfloat">
+        <div class="newAlbum_title">
+            <h2 id="newAlbum_className">热门新碟</h2>
+        </div>
+        <ul id="newAlbum_hot" class="clearfloat">
+
+        </ul>
+
+        <script type="text/html" id="newAlbum_hot_template">
+            {{each albums value key}}
+            {{if key < 10}}
+            <li class="newAlbum_item">
+                <div class="newAlbum_itemImg">
+                    <a href=""><img src="{{value.picUrl}}" alt="" class="newAlbum_img" title="{{value.name}}"></a>
+                </div>
+                <div class="newAlbum_message">
+                    <a href="" class="newAlbum_name" title="{{value.name}}">{{value.name}}</a>
+                    <a href="" class="newAlbum_nickname" title="{{value.artist.name}}">{{value.artist.name}}</a>
+                </div>
+            </li>
+            {{/if}}
+            {{/each}}
+        </script>
+        <div class="newAlbum_title">
+            <h2 id="newAlbum_className">全部新碟</h2>
+            <ul class="newAlbum_titleNav">
+                <li class="newAlbum_titleNav_item"><a href="" class="newAlbum_titleNav_link">全部</a></li>
+                <li class="newAlbum_titleNav_item">|</li>
+                <li class="newAlbum_titleNav_item"><a href="" class="newAlbum_titleNav_link">华语</a></li>
+                <li class="newAlbum_titleNav_item">|</li>
+                <li class="newAlbum_titleNav_item"><a href="" class="newAlbum_titleNav_link">欧美</a></li>
+                <li class="newAlbum_titleNav_item">|</li>
+                <li class="newAlbum_titleNav_item"><a href="" class="newAlbum_titleNav_link">韩国</a></li>
+                <li class="newAlbum_titleNav_item">|</li>
+                <li class="newAlbum_titleNav_item"><a href="" class="newAlbum_titleNav_link">日本</a></li>
+            </ul>
+        </div>
+        <ul id="newAlbum_all" class="clearfloat">
+
+        </ul>
+        <script type="text/html" id="newAlbum_all_template">
+            {{each albums value key}}
+
+            <li class="newAlbum_item">
+                <div class="newAlbum_itemImg">
+                    <a href=""><img src="{{value.picUrl}}" alt="" class="newAlbum_img" title="{{value.name}}"></a>
+                </div>
+                <div class="newAlbum_message">
+                    <a href="" class="newAlbum_name" title="{{value.name}}">{{value.name}}</a>
+                    <a href="" class="newAlbum_nickname" title="{{value.artist.name}}">{{value.artist.name}}</a>
+                </div>
+            </li>
+
+            {{/each}}
+        </script>
+
+        <div class="pageChange">
+            <button id="changePrev">&lt;上一页</button>
+            <ul class="pageNumberAll">
+                <li class="pageNumber">1</li>
+                <li id="pageDots_min">...</li>
+                <li class="pageNumber" id="pageNumber_pic">2</li>
+                <li class="pageNumber">3</li>
+                <li class="pageNumber">4</li>
+                <li class="pageNumber">5</li>
+                <li class="pageNumber">6</li>
+                <li class="pageNumber">7</li>
+                <li class="pageNumber">8</li>
+                <!-- <li class="pageNumber">9</li>
+                <li class="pageNumber">10</li>
+                <li class="pageNumber">11</li>
+                <li class="pageNumber">12</li>
+                <li class="pageNumber">13</li>
+                <li class="pageNumber">14</li> -->
+                <li id="pageDots_max">...</li>
+                <li class="pageNumber">15</li>
+            </ul>
+            <button id="changeNext">下一页&gt;</button>
+        </div>
+        
+    </main>
+    <script src="/public/js/index/index_newAlbum.js"></script>
+<!------------------- end ----------------------->

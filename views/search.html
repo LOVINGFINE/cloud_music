@@ -1,0 +1,87 @@
+<main class="clearfloat">
+    <div class="search_top">
+        <input type="text" id="search_input">
+        <a href="" id="search_top" class="font_i"></a>
+    </div>
+    <p class="search_result">搜索"<span id="search_tagart">hhh</span>",找到<span id="search_result_p"><i
+                id="search_number">55</i>首单曲</span></p>
+    <div class="search_body clearfloat">
+        <div class="search_bodyTop">
+            <ul class="search_nav">
+                <li class="search_navItem navItem_change"><a href="" onclick="getSearchType(1,1)">单曲</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(100,1)">歌手</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(10,1)">专辑</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(1014,1)">视频</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(1006,1)">歌词</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(1000,1)">歌单</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(1009,1)">主播电台</a></li>
+                <li class="search_navItem"><a href="" onclick="getSearchType(1002,1)">用户</a></li>
+            </ul>
+        </div>
+        <div class="search_bodyShow clearfloat">
+            <ul id="search_bodyOne" class="search_bodyUl clearfloat">
+
+            </ul>
+            <script type="text/html" id="search_template-1">
+                {{each songs value key}}
+                <li class="search_bodyOneItem">
+                    <a href="javascript:void(0);" class="search_playSong font_i"
+                        onclick="listSongPlay({{value.id}},0)"></a>
+                    <a href="/#/song?id={{value.id}}" class="search_songName"
+                        onclick="getSong({{value.id}})">{{value.name}}</a>
+                    <div class="search_methd">
+                        <a href="javascript:void(0);" class="font_i" onclick="listSongPlay({{value.id}},2)"></a>
+                        <a href="" class="font_i"></a>
+                        <a href="" class="font_i"></a>
+                        <a href="" class="font_i"></a>
+                    </div>
+                    <a href="" class="search_songNickname">{{value.artists[0].name}}</a>
+                    <a href="" class="search_songAlbum">{{value.album.name}}</a>
+                    <span class="search_songTime">{{value.duration%6000}}</span>
+                </li>
+                {{/each}}
+            </script>
+            <script type="text/html" id="search_template-100">
+                {{each artists value key}}
+                <li class="search_bodyTwoItem">
+                    <img src="{{value.img1v1Url}}" alt="" class="search_bodyTwoItem_img">
+                    <a href="" class="search_bodyTwoItem_name">{{value.name}}</a>
+                </li>
+                {{/each}}
+            </script>
+            <script type="text/html" id="search_template-10">
+                {{each albums value key}}
+                <li class="search_bodyThreeItem">
+                    <a href="" class="search_bodyThreeItem_link">
+                        <img src="{{value.blurPicUrl}}" alt="" class="search_bodyThreeItem_img" title="{{value.name}}">
+                        <span class="search_bodyThreeItem_play font_i" title="播放"></span>
+                    </a>
+                    <a href="" class="search_bodyThreeItem_name">{{value.name}}</a>
+                    <a href="" class="search_bodyThreeItem_name search_bodyThreeItem_nickname">{{value.artist.name}}</a>
+                </li>
+                {{/each}}
+            </script>
+            <script type="text/html" id="search_template-1014">
+                {{each videos value key}}
+                <li class="search_bodyFourItem">
+                    <a href="" class="search_bodyFourItem_link">
+                        <img src="{{value.coverUrl}}" alt="" class="search_bodyFourItem_img" title="{{value.title}}">
+                        <span class="search_bodyFourItem_play font_i"></span>
+                        <span class="search_bodyFourItem_time"></span>
+                    </a>
+                    <a href="" class="search_bodyFourItem_name">{{value.title}}</a>
+                    <a href="" class="search_bodyFourItem_name search_bodyFourItem_nickname">by {{value.creator[0].userName}}</a>
+                </li>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+    <div class="m_pageChange">
+            <button id="get_changePrev">&lt;上一页</button>
+            <div id="pageNumber">
+
+            </div>
+            <button id="get_changeNext">下一页&gt;</button>
+        </div>
+</main>
+<script src="/public/js/index/search.js"></script>

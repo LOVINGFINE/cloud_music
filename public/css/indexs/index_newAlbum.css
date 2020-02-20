@@ -1,0 +1,151 @@
+.newAlbum_title {
+    width: 900px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    border-bottom: #9b0909 2px solid;
+    margin: 40px 40px 20px 40px;
+}
+
+#newAlbum_className {
+    float: left;
+    font-weight: 500;
+}
+
+#newAlbum_hot {
+    width: 900px;
+    margin: 0 40px 0 40px;
+}
+
+#newAlbum_all {
+    width: 900px;
+    margin: 0 40px 80px 40px;
+}
+
+.newAlbum_item {
+    float: left;
+    width: 153px;
+    height: 208px;
+    margin-right: 33px;
+}
+
+.newAlbum_item:nth-child(5n) {
+    margin-right: 0;
+}
+
+.newAlbum_itemImg {
+    width: 153px;
+    height: 130px;
+    background: url(/public/images/coverall.png)
+}
+
+.newAlbum_img {
+    width: 130px;
+    height: 130px;
+}
+
+.newAlbum_message {
+    width: 130;
+    height: 50px;
+    background-color: #fff;
+}
+
+.newAlbum_name,
+.newAlbum_nickname {
+    font-size: 14px;
+    color: rgb(54, 54, 54);
+    display: block;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.newAlbum_nickname {
+    font-size: 12px;
+    color: rgb(90, 89, 89);
+}
+
+.newAlbum_titleNav {
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+}
+
+.newAlbum_titleNav_item {
+    margin-right: 10px;
+    height: 100%;
+    line-height: 40px;
+    font-size: 10px;
+    color: rgb(175, 172, 172);
+    float: left;
+}
+
+.newAlbum_titleNav_link {
+    color: rgb(121, 119, 119);
+}
+
+/*  分页管理 */
+.pageChange {
+    width: 500px;
+    height: 26px;
+    position: absolute;
+    bottom: 45px;
+    padding-left: 220px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.pageNumber {
+    float: left;
+    padding: 0 8px;
+    line-height: 24px;
+    border: rgb(207, 207, 207) 1px solid;
+    border-radius: 4px;
+    margin-left: 5px;
+    color: rgb(71, 71, 71);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#pageNumber_pic {
+    margin-left: 0;
+}
+
+
+#pageDots_min,
+#pageDots_max {
+    float: left;
+    padding: 0;
+    margin: 0;
+    color: rgb(141, 140, 140);
+}
+
+.pageNumber:hover {
+    border-color: rgb(90, 89, 89);
+    text-decoration: none;
+}
+
+#changeNext,
+#changePrev {
+    background-color: rgb(241, 240, 240);
+    border-style: none;
+    float: left;
+    width: 71px;
+    height: 26px;
+    line-height: 26px;
+    border: rgb(187, 185, 185) 1px solid;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#changePrev:hover {
+    background-color: rgb(226, 223, 223);
+}
+
+#changeNext:hover {
+    background-color: rgb(226, 223, 223);
+}

@@ -1,0 +1,135 @@
+<!----------------- 主页歌手部分 ----------------->
+
+<main class="clearfloat">
+    <div class="vocalist_leftNav">
+        <div class="vocalist_leftNav_title">
+            <h2>推荐</h2>
+            <a href="javascript:void(0);" class="link_a" data="-1"><i class="vocalist_linkDot vocalist_linkDotChange"
+                    id="link_dot"></i>推荐歌手</a>
+            <a href="javascript:void(0);" data="5001"><i class="vocalist_linkDot"></i>入驻歌手</a>
+        </div>
+        <div class="vocalist_leftNav_title">
+            <h2>华语</h2>
+            <a href="javascript:void(0);" data="1001"><i class="vocalist_linkDot"></i>华语男歌手</a>
+            <a href="javascript:void(0);" data="1002"><i class="vocalist_linkDot"></i>华语女歌手</a>
+            <a href="javascript:void(0);" data="1003"><i class="vocalist_linkDot"></i>华语组合/乐队</a>
+        </div>
+        <div class="vocalist_leftNav_title">
+            <h2>欧美</h2>
+            <a href="javascript:void(0);" data="2001"><i class="vocalist_linkDot"></i>欧美男歌手</a>
+            <a href="javascript:void(0);" data="2002"><i class="vocalist_linkDot"></i>欧美女歌手</a>
+            <a href="javascript:void(0);" data="2003"><i class="vocalist_linkDot"></i>欧美组合/乐队</a>
+        </div>
+        <div class="vocalist_leftNav_title">
+            <h2>日本</h2>
+            <a href="javascript:void(0);" data="6001"><i class="vocalist_linkDot"></i>日本男歌手</a>
+            <a href="javascript:void(0);" data="6002"><i class="vocalist_linkDot"></i>日本女歌手</a>
+            <a href="javascript:void(0);" data="6003"><i class="vocalist_linkDot"></i>日本组合/乐队</a>
+        </div>
+        <div class="vocalist_leftNav_title">
+            <h2>韩国</h2>
+            <a href="javascript:void(0);" data="7001"><i class="vocalist_linkDot"></i>韩国男歌手</a>
+            <a href="javascript:void(0);" data="7002"><i class="vocalist_linkDot"></i>韩国女歌手</a>
+            <a href="javascript:void(0);" data="7003"><i class="vocalist_linkDot"></i>韩国组合/乐队</a>
+        </div>
+        <div class="vocalist_leftNav_title">
+            <h2>其他</h2>
+            <a href="javascript:void(0);" data="4001"><i class="vocalist_linkDot"></i>其他男歌手</a>
+            <a href="javascript:void(0);" data="4002"><i class="vocalist_linkDot"></i>其他女歌手</a>
+            <a href="javascript:void(0);" data="4003"><i class="vocalist_linkDot"></i>其他组合/乐队</a>
+        </div>
+    </div>
+
+    <div class="vocalist_recommendMain">
+        <div class="vocalist_rightBody">
+            <div class="vocalist_rightBody_title">
+                <h3>入驻歌手</h3>
+                <a href="javascript:void(0);" class="vocalist_linkMore">更多&gt;</a>
+            </div>
+            <ul id="vocalist_rightHome">
+
+            </ul>
+            <script id="vocalist_rightHome_template" type="text/html">
+                {{each artists value key}}
+                {{if key < 10}}
+                <li class="vocalist_rightHome_item">
+                    <a href="javascript:void(0);">
+                        <img src="{{value.img1v1Url}}" alt="" title="{{value.name}}的音乐" class="rightHome_itemImg">
+                    </a>
+                    <div class="vocalist_mainLinks">
+                        <a href="javascript:void(0);" class="vocalist_name" title="{{value.name}}的音乐">{{value.name}}</a>
+                        <a href="javascript:void(0);" class="vocalist_homePage" title="{{value.name}}的个人主页"></a>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="vocalist_rightBody">
+            <div class="vocalist_rightBody_title">
+                <h3>热门歌手</h3>
+                <a href="javascript:void(0);" class="vocalist_linkMore">更多&gt;</a>
+            </div>
+            <ul id="vocalist_rightHot">
+
+            </ul>
+            <script id="vocalist_rightHot_template" type="text/html">
+                {{each artists value key}}
+                {{if key < 5}}
+                <li class="vocalist_rightHome_item">
+                    <a href="javascript:void(0);">
+                        <img src="{{value.img1v1Url}}" alt="" title="{{value.name}}的音乐" class="rightHome_itemImg">
+                    </a>
+                    <div class="vocalist_mainLinks">
+                        <a href="javascript:void(0);" class="vocalist_name" title="{{value.name}}的音乐">{{value.name}}</a>
+                        <a href="javascript:void(0);" class="vocalist_homePage" title="{{value.name}}的个人主页"></a>
+                    </div>
+                </li>
+                {{else if key > 4 && key < 10}}
+                <li class="vocalist_rightHome_item vocalist_itemHr">
+                    <a href="javascript:void(0);">
+                        <img src="{{value.img1v1Url}}" alt="" title="{{value.name}}的音乐" class="rightHome_itemImg">
+                    </a>
+                    <div class="vocalist_mainLinks">
+                        <a href="javascript:void(0);" class="vocalist_name" title="{{value.name}}的音乐">{{value.name}}</a>
+                        <a href="javascript:void(0);" class="vocalist_homePage" title="{{value.name}}的个人主页"></a>
+                    </div>
+                </li>
+                {{else if key > 9}}
+                <li class="vocalist_rightHome_item">
+                    <div class="vocalist_mainLinks">
+                        <a href="javascript:void(0);" class="vocalist_nameElse"
+                            title="{{value.name}}的音乐">{{value.name}}</a>
+                        <a href="javascript:void(0);" class="vocalist_homePageElse" title="{{value.name}}的个人主页"></a>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+    </div>
+    <div class="vocalist_bodyElse">
+        <div class="vocalist_rightBody_title">
+            <h3 id="vocalist_Allclass">入驻歌手</h3>
+            <a href="javascript:void(0);" class="vocalist_linkMore">更多&gt;</a>
+        </div>
+        <ul id="vocalist_bodyElse">
+
+        </ul>
+        <script id="vocalist_bodyElse_template" type="text/html">
+            {{each artists value key}}
+            <li class="vocalist_rightHome_item">
+                <a href="javascript:void(0);">
+                    <img src="{{value.img1v1Url}}" alt="" title="{{value.name}}的音乐" class="rightHome_itemImg">
+                </a>
+                <div class="vocalist_mainLinks">
+                    <a href="javascript:void(0);" class="vocalist_name" title="{{value.name}}的音乐">{{value.name}}</a>
+                    <a href="javascript:void(0);" class="vocalist_homePage" title="{{value.name}}的个人主页"></a>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+    </div>
+</main>
+<script src="/public/js/index/index_vocalist.js"></script>
+<!------------------- end ----------------------->

@@ -1,0 +1,92 @@
+
+        <main class="clearfloat">
+            <div class="songsWindow_leftBody clearfloat">
+                <div class="leftBody_songImg_max">
+                    <div class="leftBody_songImg_small">
+                        <img src="" alt="" id="leftBody_songImg">
+                    </div>
+                </div>
+                <div class="leftBody_songMesssge">
+                    <div class="leftBody_songMessage_titlie">
+                        <i id="leftBody_songTag"></i>
+                        <h3 id="leftBody_songName">陈天凤</h3>
+                        <p>歌手:<a href="javascript:void(0);" id="leftBody_songNickname-h">陈天凤</a><a
+                                href="javascript:void(0);" id="leftBody_songNickname-p"></a></p>
+                        <p>所属专辑:<a href="javascript:void(0);" id="leftBody_ablumName">陈天凤</a></p>
+                        <div class="ranklist_changeData">
+                            <div class="songWindow_changeData_play">
+                                <button id="songWindow_play" class="font_i"> 播放</button><button id="songWindow_add"
+                                    class="font_i"></button>
+                            </div>
+                            <a href="javascript:void(0);" class="changeData" id="songMessage_coll"> 收藏</a>
+                            <a href="javascript:void(0);" class="changeData" id="songMessage_share"> 分享</a>
+                            <a href="javascript:void(0);" class="changeData_download changeData" id="songMessage_download">
+                                下载</a>
+                            <a href="javascript:void(0);" class="changeData" id="songMessage_comments">(<span
+                                    id="songMessage_comments_span">暂无</span>)</a>
+                        </div>
+                    </div>
+                    <div class="leftBody_songLrc clearfloat">
+                        <ul id="leftBody_songLrc" class="clearfloat">
+                        </ul>
+                        <script id="leftBody_songLrc_temp" type="text/html">
+                        {{each data value key}}
+                          <li>{{value.c}}</li>
+                        {{/each}}
+                        </script>
+                    </div>
+    
+                </div>
+                <!-- ------- 歌曲评论 -->
+                <div class="songWindow_comments clearfloat">
+                    <a href="javascript:void(0);" id="songWindow_lrcShow">展开</a>
+                    <div class="songWindow_comments_title">
+                        <h3>评论</h3><span>共有<i id="commentsNumber">555555</i>条评论</span>
+                    </div>
+                </div>
+
+            </div>
+    
+    
+            <div class="songWindow_rightMessage">
+                <h4>包含这首歌的歌单</h4>
+                <div class="songWindow_rightContainSong">
+                    <ul id="musicList_containSong">
+    
+                    </ul>
+                    <script id="musicList_containSong_template" type="text/html">
+                        {{each playlists value key}}
+                        <li>
+                            <a href="/#/detail?id={{value.id}}"><img src="{{value.coverImgUrl}}" alt="" title="{{value.name}}" class="muiscList_containSongImg"></a>
+                            <a href="/#/detail?id={{value.id}}" class="muiscList_containSongName">{{value.name}}</a>
+                            <a href="javascript:void(0);"
+                                class="musicList_containSongNickname">by{{value.creator.nickname}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </div>
+                <h4>相似歌曲</h4>
+                <div class="songWindow_rightSongSim">
+                    <ul id="songWindow_rightSongSim">
+    
+                    </ul>
+                    <script id="songWindow_rightSongSim_template" type="text/html">
+                        {{each songs value key}}
+                        <li>
+                            <a href="javascript:void(0);" class="songWindow_rightSongSim_name" title="{{value.name}}"
+                                onclick="songLink({{value.id}})">{{value.name}}</a>
+                            <a href="javascript:void(0);" class="songWindow_rightSongSim_name"
+                                title="{{value.artists[0].name}}">{{value.artists[0].name}}</a>
+                            <div class="songWindow_rightSongSim_mot">
+                                <em class="rightSongSim_play font_i" onclick="listSongPlaySim({{value.id}},0)"></em>
+                                <em class="rightSongSim_add font_i"  onclick="listSongPlaySim({{value.id}},1)"></em>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+    
+                </div>
+            </div>
+            <script src="/public/js/songGet.js"></script>
+        </main>
+        

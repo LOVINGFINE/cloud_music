@@ -1,0 +1,116 @@
+
+    <main class="clearfloat">
+        <div class="musicListDetail_leftBody clearfloat">
+            <div class="musicListDetail_message clearfloat">
+                <div class="musicListDetail_messageImg">
+                    <img src="" alt="" id="musicDetail_img">
+                </div>
+                <div class="musicListDetail_title">
+                    <div class="musicListDetail_titleTop">
+                        <i class="musicListDetail_tag"></i>
+                        <h3 id="musicListDetail_songName">陈天凤</h3>
+                    </div>
+                    <div class="musicListDetail_perMessage">
+                        <img src="" alt="" id="musiclistDetail_nicknameImg">
+                        <span class="musicListDetail_name"><a href="" id="musicListDetail_nickname"></a></span>
+                        <span class="musicListDetail_name"><i id="musicList_createTime"></i> 创建</span>
+                    </div>
+                    <div class="musicList_metod">
+                        <button id="musicList_playAll" class="font_i"> 播放</button>
+                        <button id="musicList_add" class="font_i"></button>
+                        <a href="javascript:void(0);" class="musicList_metodAll font_i" id="musicList_metodAdd">(<span
+                                id="metodAdd"></span>)</a>
+                        <a href="javascript:void(0);" class="musicList_metodAll font_i">(<span
+                                id="metodShare">ssss</span>)</a>
+                        <a href="javascript:void(0);" class="musicList_metodAll font_i" id="musicList_metodDow">
+                            下载</a>
+                        <a href="javascript:void(0);" class="musicList_metodAll font_i" id="musicList_metodCom">
+                            (<span id="metodCom">sss</span>)</a>
+                    </div>
+                    <div class="musicList_introduce">
+                        <span>标签:</span>
+                        <p class="musicList_labelBox">
+
+                        </p>
+                    </div>
+                    <div class="musicList_introduceTxt"><span>介绍:</span><span id="introduceTxt">asdadssa</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="musicList_header">
+                <h3 class="musicList_h3">歌曲列表</h3>
+                <span class="musicList_songNumber"><i id="songNumber"></i>首歌</span>
+                <span class="musicList_playTimes">播放:<i id="playTimes"></i>次</span>
+            </div>
+            <div class="musicList_headerTiele">
+                <div class="headerTitle"></div>
+                <div class="headerTitle">歌曲标题</div>
+                <div class="headerTitle">时长</div>
+                <div class="headerTitle">歌手</div>
+                <div class="headerTitle">专辑</div>
+            </div>
+            <ul id="musicList" class="clearfloat">
+
+            </ul>
+            <script id="musicList_template" type="text/html">
+                {{each tracks value key}}
+                <li class="musicList_item">
+                    <div class="musicList_itemOne">{{key+1}}
+                        <a href="javascript:void(0)" class="font_i musicList_itemPlay"
+                            onclick="listSongPlay({{value.id}}, 0)"></a>
+                    </div>
+                    <div class="musicList_itemTwo">
+                        <a href="/#/song?id={{value.id}}" onclick="getSong({{value.id}})" class="musicList_itemName">{{value.name}}</a>
+                    </div>
+                    <div class="musicList_itemThree">
+                        <span></span>
+                    </div>
+                    <div class="musicList_itemFour">
+                        <a href="">{{value.ar[0].name}}</a>
+                    </div>
+                    <div class="musicList_itemFive">
+                        <a href="">{{value.al.name}}</a>
+                    </div>
+                </li>
+                {{/each}}
+            </script>
+        </div>
+
+
+
+        <div class="musicListDetail_rightMessage clearfloat">
+            <div class="rightMessage_title">
+                <h4 class="rightMessage_title_h4">喜欢这个歌单的人</h4>
+            </div>
+            <ul id="right_personLove" class="clearfloat">
+            </ul>
+            <script id="right_personLove_template" type="text/html">
+                {{each subscribers value key}}
+                <li class="right_perLvItem">
+                    <a href=""><img src="{{value.avatarUrl}}" alt="" class="right_perLvItemImg"
+                            title="{{value.nickname}}"></a>
+                </li>
+                {{/each}}
+            </script>
+            <div class="rightMessage_title">
+                <h4 class="rightMessage_title_h4">相关推荐</h4>
+            </div>
+            <ul id="right_about" class="clearfloat">
+
+            </ul>
+            <script id="right_about_template" type="text/html">
+                {{each playlists value key}}
+                <li class="right_aboutItem">
+                    <img src="{{value.coverImgUrl}}" alt="" class="right_aboutItemImg" title="{{value.name}}">
+                    <a href="/#/detail?id={{value.id}}" onclick="getMusicList({{value.id}})" class="right_aboutItemName" id="right_aboutItemName"
+                        title="{{value.name}}">{{value.name}}</a>
+                    <a href="#" class="right_aboutItemName">by&nbsp;<span id="right_aboutItemNickname"
+                            title="{{value.creator.nickname}}">{{value.creator.nickname}}</span></a>
+                </li>
+                {{/each}}
+            </script>
+        </div>
+    </main>
+    <script src="/public/js/musicListDetail.js"></script>

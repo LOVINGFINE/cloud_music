@@ -1,0 +1,154 @@
+<!--------------- 主页歌单部分 ------------------->
+    <main class="clearfloat">
+        <div class="main_musiclist_top">
+            <span id="musiclistClass_name"></span>
+            <!-- 分类框 -->
+            <a href="javascript:void(0);" id="musiclist_chice">选择分类</a>
+            <div id="musiclist_classAllBox">
+                <div id="optBox"></div>
+                <div class="musiclist_classAllOne">
+                    <a href="/index_musiclist.html?limit=35?cat=全部?order=1" id="musiclist_classAll">全部风格</a>
+                </div>
+                <div class="musiclist_classAllBody">
+                    <div class="musiclist_class">
+                        <h4 class="musilist_classTitle"><span class="font_i"></span> 语种</h4>
+                        <ul id="classRightLink_one" class="classRightLink_ul">
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=华语" onclick="getTarget(3,'华语')" class="musicClass_itemIink">华语</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=欧美" onclick="getTarget(3,'欧美')" class="musicClass_itemIink">欧美</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=日语" onclick="getTarget(3,'日语')" class="musicClass_itemIink">日语</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=韩语" onclick="getTarget(3,'韩语')" class="musicClass_itemIink">韩语</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=粤语" onclick="getTarget(3,'粤语')" class="musicClass_itemIink">粤语</a></li>
+                        </ul>
+                    </div>
+                    <div class="musiclist_class">
+                        <h4 class="musilist_classTitle"><span class="font_i"></span> 风格</h4>
+                        <ul id="classRightLink_two" class="classRightLink_ul">
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=流行" class="musicClass_itemIink" onclick="getTarget(3,'流行')">流行</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=摇滚" class="musicClass_itemIink" onclick="getTarget(3,'摇滚')">摇滚</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=民谣" class="musicClass_itemIink" onclick="getTarget(3,'民谣')">民谣</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=电子" class="musicClass_itemIink" onclick="getTarget(3,'电子')">电子</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=舞曲" class="musicClass_itemIink" onclick="getTarget(3,'舞曲')">舞曲</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=说唱" class="musicClass_itemIink" onclick="getTarget(3,'说唱')">说唱</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=轻音乐" class="musicClass_itemIink" onclick="getTarget(3,'轻音乐')">轻音乐</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=爵士" class="musicClass_itemIink" onclick="getTarget(3,'爵士')">爵士</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=R&B/Soul" class="musicClass_itemIink" onclick="getTarget(3,'R&B/Soul')">R&B/Soul</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=古典" class="musicClass_itemIink" onclick="getTarget(3,'古典')">古典</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=民族" class="musicClass_itemIink" onclick="getTarget(3,'民族')">民族</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=英伦" class="musicClass_itemIink" onclick="getTarget(3,'英伦')">英伦</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=金属" class="musicClass_itemIink" onclick="getTarget(3,'金属')">金属</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=朋克" class="musicClass_itemIink" onclick="getTarget(3,'朋克')">朋克</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=蓝调" class="musicClass_itemIink" onclick="getTarget(3,'蓝调')">蓝调</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=雷鬼" class="musicClass_itemIink" onclick="getTarget(3,'雷鬼')">雷鬼</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=世界音乐" class="musicClass_itemIink" onclick="getTarget(3,'世界音乐')">世界音乐</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=拉丁" class="musicClass_itemIink" onclick="getTarget(3,'拉丁')">拉丁</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=New Age" class="musicClass_itemIink" onclick="getTarget(3,'New Age')">New Age</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=古风" class="musicClass_itemIink" onclick="getTarget(3,'古风')">古风</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=后摇" class="musicClass_itemIink" onclick="getTarget(3,'后摇')">后摇</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=Bossa Nova" class="musicClass_itemIink" onclick="getTarget(3,'Bossa Nova')">Bossa Nova</a></li>
+                        </ul>
+                    </div>
+                    <div class="musiclist_class">
+                        <h4 class="musilist_classTitle"><span class="font_i"></span> 场景</h4>
+                        <ul id="classRightLink_four" class="classRightLink_ul">
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=清晨" class="musicClass_itemIink" onclick="getTarget(3,'清晨')" >清晨</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=夜晚" class="musicClass_itemIink" onclick="getTarget(3,'夜晚')" >夜晚</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=学习" class="musicClass_itemIink" onclick="getTarget(3,'学习')" >学习</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=工作" class="musicClass_itemIink" onclick="getTarget(3,'工作')" >工作</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=午休" class="musicClass_itemIink" onclick="getTarget(3,'午休')" >午休</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=下午茶" class="musicClass_itemIink" onclick="getTarget(3,'下午茶')" >下午茶</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=地铁" class="musicClass_itemIink" onclick="getTarget(3,'地铁')" >地铁</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=驾车" class="musicClass_itemIink" onclick="getTarget(3,'驾车')" >驾车</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=运动" class="musicClass_itemIink" onclick="getTarget(3,'运动')" >运动</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=旅行" class="musicClass_itemIink" onclick="getTarget(3,'旅行')" >旅行</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=散步" class="musicClass_itemIink" onclick="getTarget(3,'散步')" >散步</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=酒吧" class="musicClass_itemIink" onclick="getTarget(3,'酒吧')" >酒吧</a></li>
+                        </ul>
+                    </div>
+                    <div class="musiclist_class">
+                        <h4 class="musilist_classTitle"><span class="font_i"></span> 情感</h4>
+                        <ul id="classRightLink_five" class="classRightLink_ul">
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=怀旧" class="musicClass_itemIink" onclick="getTarget(3,'怀旧')">怀旧</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=清新" class="musicClass_itemIink" onclick="getTarget(3,'清新')">清新</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=浪漫" class="musicClass_itemIink" onclick="getTarget(3,'浪漫')">浪漫</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=伤感" class="musicClass_itemIink" onclick="getTarget(3,'伤感')">伤感</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=治愈" class="musicClass_itemIink" onclick="getTarget(3,'治愈')">治愈</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=放松" class="musicClass_itemIink" onclick="getTarget(3,'放松')">放松</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=孤独" class="musicClass_itemIink" onclick="getTarget(3,'孤独')">孤独</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=感动" class="musicClass_itemIink" onclick="getTarget(3,'感动')">感动</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=兴奋" class="musicClass_itemIink" onclick="getTarget(3,'兴奋')">兴奋</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=快乐" class="musicClass_itemIink" onclick="getTarget(3,'快乐')">快乐</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=思念" class="musicClass_itemIink" onclick="getTarget(3,'思念')">思念</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=安静" class="musicClass_itemIink" onclick="getTarget(3,'安静')">安静</a></li>
+                        </ul>
+                    </div>
+                    <div class="musiclist_class">
+                        <h4 class="musilist_classTitle"><span class="font_i"></span> 主题</h4>
+                        <ul id="classRightLink_six" class="classRightLink_ul">
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=影视原声"onclick="getTarget(3,'影视原声')"  class="musicClass_itemIink">影视原声</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=ACG"     onclick="getTarget(3,'ACG')" class="musicClass_itemIink">ACG</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=儿童"    onclick="getTarget(3,'儿童')" class="musicClass_itemIink">儿童</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=校园"    onclick="getTarget(3,'校园')" class="musicClass_itemIink">校园</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=游戏"    onclick="getTarget(3,'游戏')" class="musicClass_itemIink">游戏</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=70后"    onclick="getTarget(3,'70后')" class="musicClass_itemIink">70后</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=80后"    onclick="getTarget(3,'80后')" class="musicClass_itemIink">80后</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=90后"    onclick="getTarget(3,'90后')" class="musicClass_itemIink">90后</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=网络歌曲" onclick="getTarget(3,'网络歌曲')" class="musicClass_itemIink">网络歌曲</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=KTV"     onclick="getTarget(3,'KTV')" class="musicClass_itemIink">KTV</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=经典"    onclick="getTarget(3,'经典')" class="musicClass_itemIink">经典</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=翻唱"    onclick="getTarget(3,'翻唱')" class="musicClass_itemIink">翻唱</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=吉他"    onclick="getTarget(3,'吉他')" class="musicClass_itemIink">吉他</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=钢琴"    onclick="getTarget(3,'钢琴')" class="musicClass_itemIink">钢琴</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=器乐"    onclick="getTarget(3,'器乐')" class="musicClass_itemIink">器乐</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=榜单"    onclick="getTarget(3,'榜单')" class="musicClass_itemIink">榜单</a></li>
+                            <li class="musicLink_item"><a href="/#/musiclist?cat=00后"    onclick="getTarget(3,'00后')"  class="musicClass_itemIink">00后</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="musiclist_hot">热门</a>
+        </div>
+        <ul class="main_musiclist_all clearfloat" id="main_musiclist_all"></ul>
+        <script id="musiclist_all_template" type="text/html">
+            {{each playlists value key}}
+            <li>
+                <div class="musiclist_play">
+                    <a href="/#/detail?id={{value.id}}" onclick="getMusicList({{value.id}})">
+                        <img src="{{value.coverImgUrl}}" alt="" title="{{value.name}}" class="musiclist_play_img">
+                    </a>
+                    <div class="musiclist_bottom">
+                        <span> {{value.playCount}}</span>
+                        <a href="javascript:void(0);" onclick="detailPlay({{value.id}})"></a>
+                    </div>
+                    <a href="/musicListDetail.html?id={{value.id}}" class="musiclist_name">{{value.name}}</a>
+                    <a href="javascript:void(0);" class="musiclist_nickname">by{{value.creator.nickname}}</a>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+        <div class="m_pageChange">
+            <button id="m_changePrev">&lt;上一页</button>
+            <ul class="pageNumberAll">
+                <li class="pageNumber">1</li>
+                <li id="pageDots_min">...</li>
+                <li class="pageNumber" id="pageNumber_pic">2</li>
+                <li class="pageNumber">3</li>
+                <li class="pageNumber">4</li>
+                <li class="pageNumber">5</li>
+                <li class="pageNumber">6</li>
+                <li class="pageNumber">7</li>
+                <li class="pageNumber">8</li>
+                <!-- <li class="pageNumber">9</li>
+                    <li class="pageNumber">10</li>
+                    <li class="pageNumber">11</li>
+                    <li class="pageNumber">12</li>
+                    <li class="pageNumber">13</li>
+                    <li class="pageNumber">14</li> -->
+                <li id="pageDots_max">...</li>
+                <li class="pageNumber">15</li>
+            </ul>
+            <button id="m_changeNext">下一页&gt;</button>
+        </div>
+        
+    </main>
+    <script src="/public/js/index/index_musiclist.js" type="text/javascript"></script>
+<!------------------- end ----------------------->

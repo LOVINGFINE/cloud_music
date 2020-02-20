@@ -1,0 +1,297 @@
+
+    <!----------------------------end------------------------------->
+
+        <!-- 轮播图 -->
+        <div class="banner">
+            <div class="banner_main">
+                <div class="m_box" id="banner_pic">
+                    <script id="banner" type="text/html">
+                        <ul class="list_imgs" id="list_imgs">
+                            {{each banners}}
+                            <li style="color:{{$value.titleColor}}">
+                                <a href="javascript:void(0);">
+                                    <img src="{{$value.imageUrl}}" alt="" class="banner_img">
+                                </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </script>
+                </div>
+                <ol class="nav_imgs">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <span class="c_left">&lt;</span>
+                <span class="c_right">&gt;</span>
+                <div class="dow">
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 主体 -->
+        <main class="clearfloat">
+            <!-- 左边部分 -->
+            <div class="main-left clearfloat">
+                <div class="main_h">
+                    <span class="round"></span>
+                    <h2>热门推荐</h2>
+                    <ul class="main_h_list">
+                        <li><a href="/#/musiclist?cat=华语" onclick="getTarget(3,'华语')">华语</a></li>
+                        <li><span>|</span></li>
+                        <li><a href="/#/musiclist?cat=流行" onclick="getTarget(3,'流行')">流行</a></li>
+                        <li><span>|</span></li>
+                        <li><a href="/#/musiclist?cat=摇滚" onclick="getTarget(3,'摇滚')">摇滚</a></li>
+                        <li><span>|</span></li>
+                        <li><a href="/#/musiclist?cat=民谣" onclick="getTarget(3,'民谣')">民谣</a></li>
+                        <li><span>|</span></li>
+                        <li><a href="/#/musiclist?cat=电子" onclick="getTarget(3,'电子')">电子</a></li>
+                    </ul>
+                    <div class="main_more">
+                        <a href="/#/musiclist/cat=全部" id="index_musicList_more" onclick="getTarget(3,'全部')">更多</a>
+                        <div class="main_h_more"></div>
+                    </div>
+                </div>
+                <!-- 热门歌单 -->
+                <div class="main_l_recommend clearfloat">
+                    <ul id="list_hot"></ul>
+                    <script id="hot_list_temp" type="text/html">
+                        {{each result value key}}
+                        <li>
+                            <div class="play">
+                                <a href="/#/detail?id={{value.id}}" onclick="getMusicList({{value.id}})">
+                                    <img src="{{value.picUrl}}" alt="" title="{{value.name}}">
+                                </a>
+                                <div>
+                                    <span> {{value.playCount}}</span>
+                                    <a href="javascript:void(0);" onclick="detailPlay({{value.id}})"></a>
+                                </div>
+                            </div>
+                            <a href="/musicListDetail.html?id={{value.id}}">{{value.name}}</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </div>
+                <div class="main_h">
+                    <span class="round"></span>
+                    <h2>新碟上架</h2>
+                    <div class="main_more"><a href="/#/newAlbum" id="index_ablumList_more" onclick="getTarget(6)">更多</a>
+                        <div class="main_h_more"></div>
+                    </div>
+                </div>
+                <!-- 专辑推荐 -->
+                <div class="new">
+                    <div class="n-left" id="n_left"></div>
+                    <div class="n-right" id="n_right"></div>
+                    <div class="show">
+                        <ul class="show_block" id="albums_person"></ul>
+                        <script id="albums_temp" type="text/html">
+                            {{each albums value key}}
+                            {{if key < 10}}
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="{{value.picUrl}}" alt="" title="{{value.name}}">
+                                    <a href="javascript:void(0);" class="p" onclick="albumPlay({{value.id}})"></a>
+                                    <a href="javascript:void(0);" class="artist_names artist_name">{{value.name}}</a>
+                                    <a href="javascript:void(0);" class="artist_names">{{value.artist.name}}</a>
+                                </a>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                            {{each albums value key}}
+                            {{if key < 5}}
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="{{value.picUrl}}" alt="" title="{{value.name}}">
+                                    <a href="javascript:void(0);" class="p" onclick="albumPlay({{value.id}})"></a>
+                                    <a href="javascript:void(0);" class="artist_names artist_name">{{value.name}}</a>
+                                    <a href="javascript:void(0);" class="artist_names">{{value.artist.name}}</a>
+                                </a>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                        </script>
+                    </div>
+                </div>
+                <div class="main_h">
+                    <span class="round"></span>
+                    <h2>榜单</h2>
+                    <div class="main_more"><a href="/#/rankinglist" onclick="getTarget(2)"
+                            id="index_rankingList_more">更多</a>
+                        <div class="main_h_more"></div>
+                    </div>
+                </div>
+                <!-- 榜单部分 -->
+                <div class="left_list clearfloat">
+                    <div class="left_list_all">
+                        <div class="left_list_header">
+                            <img src="" alt="" class="left_list_img" id="headerList_oneImg">
+                            <div class="left_title_all">
+                                <a href="/#/rankinglist?id=19723756" class="left_list_title" onclick="getTarget(2,19723756)">云音乐飙升榜</a>
+                                <a href="javascript:void(0);" class="left_list_header_coll" title="播放全部"></a>
+                                <a href="javascript:void(0);" class="left_list_header_coll"></a>
+                            </div>
+                        </div>
+                        <ul id="list_one"></ul>
+                        <script id="list_one_temp" type="text/html">
+                            {{each tracks value key }}
+                            {{if key < 3}}
+                            <li><span class="red">{{key+1}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{else if key < 10}}
+                            <li>
+                                <span>{{key}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                            <li><a href="/#/rankinglist?id=19723756" class="list_all_a"
+                                    onclick="getTarget(2,19723756)">查看全部&gt;</a></li>
+                        </script>
+                    </div>
+                    <div class="left_list_all">
+                        <div class="left_list_header">
+                            <img src="" alt="" class="left_list_img" id="headerList_twoImg">
+                            <div class="left_title_all">
+                                <a href="/#/rankinglist?id=3779629" class="left_list_title">云音乐新歌榜</a>
+                                <a href="javascript:void(0);" class="left_list_header_coll" title="播放全部"></a>
+                                <a href="javascript:void(0);" class="left_list_header_coll"></a>
+                            </div>
+                        </div>
+                        <ul id="list_two"></ul>
+                        <script id="list_two_temp" type="text/html">
+                            {{each tracks value key }}
+                            {{if key < 3}}
+                            <li>
+                                <span class="red">{{key+1}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{else if key < 10}}
+                            <li><span>{{key}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                            <li><a href="/#/rankinglist?id=3779629" class="list_all_a"
+                                    onclick="getTarget(2,3779629)">查看全部&gt;</a></li>
+                        </script>
+                    </div>
+                    <div class="left_list_all">
+                        <div class="left_list_header">
+                            <img src="" alt="" class="left_list_img" id="headerList_threeImg">
+                            <div class="left_title_all">
+                                <a href="/#/rankinglistid=2884035" class="left_list_title">云音乐原创榜</a>
+                                <a href="javascript:void(0);" class="left_list_header_coll" title="播放全部"></a>
+                                <a href="javascript:void(0);" class="left_list_header_coll"></a>
+                            </div>
+                        </div>
+                        <ul id="list_three"></ul>
+                        <script id="list_three_temp" type="text/html">
+                            {{each tracks value key }}
+                            {{if key < 3}}
+                            <li>
+                                <span class="red">{{key+1}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{else if key < 10}}
+                            <li>
+                                <span>{{key}}.</span>
+                                <a href="/#/song?id={{value.id}}" class="list_all_a" onclick="getSong({{value.id}})">{{value.name}}</a>
+                                <span class="list_all_coll">
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},0)"></a>
+                                    <a href="javascript:void(0);" class="coll"></a>
+                                    <a href="javascript:void(0);" class="coll"
+                                        onclick="listSongPlay({{value.id}},2)"></a>
+                                </span>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                            <li><a href="/#/rankinglist?id=2884035" class="list_all_a"
+                                    onclick="getTarget(2,2884035)">查看全部&gt;</a></li>
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边部分 -->
+            <div class="main-right">
+                <div class="reg">
+                    <span>登录网易云音乐，可以享受无限收藏的乐趣，并且可以同步到手机</span>
+                    <button>用户登录</button>
+                </div>
+                <div class="right-1">
+                    <div class="r-1"><span>入驻歌手</span><a onclick="getTarget(5)" href="/#/vocalist" id="link_vocalistHome">查看全部&gt;</a>
+                    </div>
+                    <ul class="r-2" id="artists_in">
+                        <script id="artists_temp" type="text/html">
+                            {{each artists value key}}
+                            {{if key < 5}}
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="{{value.img1v1Url}}" alt="">
+                                    <h4 class="arist_name">{{value.name}}{{value.alias[0]}}</h4>
+                                    <span>{{value.name}}</span>
+                                </a>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                        </script>
+                    </ul>
+                    <div class="r-3">
+                        申请成为网易音乐人
+                    </div>
+                    <div class="r-1"><span>热门主播</span></div>
+                    <div class="r-4">
+                        <li><img src="" alt=""><a href="javascript:void(0);">陈立</a> <span>心理学家、美食家</span> </li>
+                        <li><img src="" alt=""><a href="">陈立</a> <span>心理学家、美食家</span> </li>
+                        <li><img src="" alt=""><a href="">陈立</a> <span>心理学家、美食家</span> </li>
+                        <li><img src="" alt=""><a href="">陈立</a> <span>心理学家、美食家</span> </li>
+                        <li><img src="" alt=""><a href="">陈立</a> <span>心理学家、美食家</span> </li>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <script src="/public/js/index/index_recommend.js"></script>
+    <!------------------- end ----------------------->

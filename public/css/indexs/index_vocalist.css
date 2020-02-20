@@ -1,0 +1,170 @@
+
+
+
+.vocalist_leftNav {
+    width: 179px;
+    height: 1600px;
+    /* border-left: #ccc solid 1px; */
+    float: left;
+}
+
+.vocalist_leftNav h2 {
+    font-size: 16px;
+    font-weight: 400px;
+    padding-left: 10px;
+}
+
+.vocalist_leftNav a {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* 改变link_a的样式 */
+.vocalist_leftNav .link_a {
+    color: rgb(192, 19, 19);
+    border: rgb(218, 216, 216) 1px solid;
+    background-color: #fff;
+}
+
+
+.vocalist_leftNav_title {
+    width: 160px;
+    margin: 15px 9px 5px 9px;
+    border-bottom: rgb(133, 132, 132) 1px solid;
+}
+
+.vocalist_linkDot {
+    float: left;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(132, 134, 134);
+    margin: 13px 15px;
+}
+
+.vocalist_linkDotChange {
+    background-color: rgb(192, 19, 19);
+}
+.vocalist_recommendMain {
+    border-left: rgb(185, 185, 185) solid 1px;
+    padding: 40px;
+    width: 720px;
+    height: 1660px;
+    background-color: #fff;
+    float: right;
+}
+.vocalist_rightBody {
+    width: 720px;
+}
+
+.vocalist_rightBody_title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid rgb(184, 16, 16);
+}
+
+.vocalist_rightBody_title h3 {
+    font-size: 24px;
+    font-weight: 500;
+    float: left;
+}
+
+.vocalist_linkMore {
+    float: right;
+    font-size: 12px;
+    color: #666;
+}
+
+#vocalist_rightHome,
+#vocalist_rightHot {
+    width: 100%;
+    height: 370px;
+    padding: 20px 0 25px;
+}
+/* #vocalist_rightHot {
+    border-bottom: 1px #666 dashed;
+} */
+
+#vocalist_rightHot .vocalist_itemHr{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px #666 dashed;
+}
+.vocalist_rightHome_item {
+    width: 130px;
+    float: left;
+    padding-right: 17px;
+}
+
+.vocalist_rightHome_item:nth-child(5n) {
+    padding-right: 0;
+}
+
+.rightHome_itemImg {
+    width: 100%;
+    height: 130px;
+    border: #D3D3D3 1px solid;
+    box-sizing: border-box;
+}
+.vocalist_mainLinks {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.vocalist_homePage::after {
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #fff;
+    content: "";
+    float: right;
+    margin-left: 2px;
+    color: rgb(136, 17, 17);
+}
+.vocalist_homePageElse::after {
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #fff;
+    content: "";
+    position: absolute;
+    top: 5px;
+    color: rgb(136, 17, 17);
+}
+
+
+.vocalist_name {
+    font-size: 12px;
+    color: #333;
+}
+.vocalist_nameElse {
+    font-size: 12px;
+    color: #333;
+    margin-left: 16px;
+    width: 100px;
+    display: block;
+    line-height: 30px;
+}
+
+.vocalist_bodyElse {
+    padding: 40px;
+    width: 720px;
+    height: 1800px;
+    border-left: 1px solid rgb(187, 186, 186);
+    float: right;
+    background-color: #fff;
+    display: none;
+}
+#vocalist_bodyElse {
+    margin-top: 20px;
+}

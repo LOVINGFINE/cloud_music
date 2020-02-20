@@ -1,0 +1,317 @@
+
+
+.djstation_nav {
+    width: 900px;
+    height: 194px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.djstation_navItem {
+    float: left;
+    margin: 0 33px 25px 0;
+}
+
+.djstation_navItem:nth-child(9n) {
+    margin-right: 0;
+}
+
+.djstation_navItem:hover {
+    background-color: rgb(226, 225, 225);
+}
+
+.djstation_navLink {
+    display: block;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    line-height: 16px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* 改变nav样式的类 */
+.djstation_navItemChange {
+    border: 2px solid #D35757;
+    color: #D35757;
+}
+
+
+.djstation_navItem .djstation_navImg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 2px auto 0;
+}
+
+.djstation_navName {
+    text-align: center;
+    margin: -3px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.djstation_nav_left,
+.djstation_nav_right {
+    font-family: 'icomoon';
+    color: #999;
+    font-size: 24px;
+    position: absolute;
+    top: 64px;
+}
+
+.djstation_nav_left {
+    left: -20px;
+    display: none;
+}
+
+.djstation_nav_right {
+    right: -20px;
+}
+
+.djstation_nav a:hover {
+    text-decoration: none;
+}
+
+.djstation_nav_one,
+.djstation_nav_two {
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    top: 175px;
+    left: 415px;
+    cursor: pointer;
+}
+
+.djstation_nav_two {
+    left: 440px;
+    background-color: rgba(85, 85, 85, 0.4);
+}
+
+#djstation_nav_two {
+    display: none;
+}
+
+.djstation_bodyOne {
+    width: 900px;
+    height: 650px;
+    margin: 10px 40px 0 40px;
+}
+
+.djstationOne_left,
+.djstationOne_right {
+    width: 424px;
+    height: 642px;
+}
+
+.djstationOne_left {
+    float: left;
+}
+
+.djstationOne_right {
+    float: right;
+}
+
+.djstationOne_title {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid rgb(223, 22, 22);
+}
+
+.djstationOne_title h2 {
+    color: rgb(58, 57, 57);
+    float: left;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.djstation_more {
+    font-size: 12px;
+    float: right;
+    margin: 10px 0;
+    color: #666;
+}
+
+#djstationOne_body_left,
+#djstationOne_body_right {
+    width: 100%;
+    height: 601px;
+    border-left: 1px solid rgb(201, 201, 201);
+    border-right: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(201, 201, 201);
+    box-sizing: border-box;
+}
+
+.djstationOne_item {
+    width: 100%;
+    padding: 10px 0 10px;
+    height: 40px;
+}
+
+.djstationOne_item:nth-child(2n) {
+    background-color: rgb(243, 242, 242);
+}
+
+.djstationOne_body_itemImg {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0 10px 0 20px;
+}
+
+.djstationOne_body_itemMess {
+    height: 100%;
+    width: 208px;
+    float: left;
+}
+
+.djstation_body_itemName,
+.djstation_body_itemNickname {
+    display: block;
+    width: 100%;
+    height: 50%;
+    line-height: 20px;
+    font-size: 13px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.djstation_body_itemNickname {
+    color: #999;
+}
+
+.djstation_body_itemName:hover {
+    text-decoration: #666 underline solid;
+}
+
+.djstation_body_itemNickname:hover {
+    text-decoration: #666 underline solid;
+}
+
+.djstation_bodyLeft_itemLink {
+    float: right;
+    width: 63px;
+    height: 16px;
+    margin: 11px 27px 0 0;
+    border: #999 solid 1px;
+    line-height: 16px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.djstationOne_right_itemPct {
+    float: right;
+    margin: 14px 20px 0 0;
+    width: 96px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 4px;
+}
+
+.djstationOne_right_itemPctNew {
+    display: block;
+    height: 8px;
+    background-color: rgb(139, 139, 139);
+    width: 20px;
+    border-radius: 4px;
+}
+
+.djstationOne_right_rank {
+    width: 27px;
+    height: 40px;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+}
+
+.djstationOne_right_rankNew {
+    display: block;
+    height: 20px;
+    width: 100%;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.djstationOne_right_rank .hotColor {
+    color: #D35757;
+}
+
+.djstationOne_right_rankUp {
+    display: block;
+    font-style: normal;
+    height: 20px;
+    width: 100%;
+}
+
+/* 故事电台 */
+.djstation_bodyClass {
+    width: 900px;
+    height: 365px;
+    margin: 35px 40px 0 40px;
+}
+
+.djstation_bodyTitle {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #D35757;
+}
+
+.djstation_name {
+    font-size: 24px;
+    color: rgb(36, 35, 35);
+    line-height: 40px;
+}
+
+.djstation_name:hover {
+    text-decoration: none;
+}
+
+.djstation_bodyClass_item {
+    width: 440px;
+    height: 121px;
+    float: left;
+    padding: 20px 0;
+    margin-right: 20px;
+}
+
+.djstation_bodyClass_item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.bodyTwo_itemImg {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.distation_bodyTwo_message {
+    width: 295px;
+    height: 64px;
+    float: right;
+}
+
+.bodyTwo_itemName {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(58, 57, 57);
+    display: block;
+    width: 100%;
+    margin: 16px 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bodyTwo_itemMess {
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

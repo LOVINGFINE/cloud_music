@@ -1,0 +1,120 @@
+<!---------------- 主页排行榜部分 ---------------->
+<main class="clearfloat">
+    <div class="main_rankinglist_left">
+        <h2>云音乐特色榜</h2>
+        <ul class="hot_rankinglist" id="hot_rankinglist">
+
+        </ul>
+        <script id="hot_rankinglist_template" type="text/html">
+            {{each list value key}}
+            {{if key < 4}}
+            <li>
+                <a href="/#/rankingList?id={{value.id}}"  onclick="rankListShow({{value.id}})">
+                    <img src="{{value.coverImgUrl}}" alt="" class="hot_left_img">
+                    <p class="hot_left_p">{{value.name}}</p>
+                    <span class="hot_left_span">{{value.updateFrequency}}</span>
+                </a>
+            </li>
+            {{/if}}
+            {{/each}}
+        </script>
+        <h2 class="h2-two">全球媒体榜</h2>
+        <ul class="other_rankinglist" id="other_rankinglist">
+        </ul>
+        <script id="other_rankinglist_template" type="text/html">
+            {{each list value key}}
+            {{if key > 3}}
+            <li onclick="rankListShow({{value.id}})">
+                <a href="/#/rankingList?id={{value.id}}"  onclick="rankListShow({{value.id}})">
+                    <img src="{{value.coverImgUrl}}" alt="" class="hot_left_img">
+                    <p class="hot_left_p">{{value.name}}</p>
+                    <span class="hot_left_span">{{value.updateFrequency}}</span>
+                </a>
+            </li>
+            {{/if}}
+            {{/each}}
+        </script>
+    </div>
+    <div class="main_rankinglist_right clearfloat">
+        <div class="ranklist_title">
+            <div id="ranklist_titleImg">
+                <img src="" alt="" id="titleImg">
+            </div>
+            <div class="ranklist_messageMain">
+                <h2 id="ranklist_name">飙升榜</h2>
+                <p class="ranklist_messageMain_date">
+                    <span id="ranklist_dateTime"><i class="font_i">最近更新: </i>9月4日</span>
+                    (<span id="ranklist_update">每天更新</span>)
+                </p>
+                <div class="ranklist_changeData">
+                    <div class="ranklist_changeData_play">
+                        <button id="changeData_play" class="font_i"> 播放</button><button id="changeData_add"
+                            class="font_i"></button>
+                    </div>
+                    <a href="javascript:void(0);" id="changeData_coll" class="changeData">(<span
+                            id="changeData_coll_span">9999</span>)</a>
+                    <a href="javascript:void(0);" id="changeData_share" class="changeData">(<span
+                            id="changeData_share_span">99999</span>)</a>
+                    <a href="javascript:void(0);" id="changeData_download" class="changeData_download changeData">
+                        下载</a>
+                    <a href="javascript:void(0);" id="changeData_comments" class="changeData">(<span
+                            id="changeData_comments_span">9999</span>)</a>
+                </div>
+            </div>
+        </div>
+        <div class="ranklist_body_right">
+            <div class="ranklist_body_header">
+                <h2>歌曲列表</h2>
+                <div class="ranklist_allSongs">
+                    <span id="ranklist_allSongs">100</span>首歌
+                </div>
+                <div class="ranklist_playTimes">
+                    播放:<span id="ranklist_playTimes">9999999</span>次
+                </div>
+            </div>
+            <div class="ranklist_body_main clearfloat">
+                <div class="ranklist_body_main_title">
+                    <div class="ranklist_body_main_1"></div>
+                    <div class="ranklist_body_main_2">标题</div>
+                    <div class="ranklist_body_main_3">时长</div>
+                    <div class="ranklist_body_main_4">歌手</div>
+                </div>
+                <ul id="ranklist_bodyData" class="clearfloat">
+                </ul>
+                <script id="ranklist_bodyData_temp" type="text/html">
+                    {{each tracks value key}}
+                    {{if key < 4}}
+                    <li class="ranklist_bodyData_top">
+                        <span class="songDataIndex">{{key+1}}<i></i></span>
+                        <img src="{{value.al.picUrl}}" alt="" title="{{value.al.name}}">
+                        <a href="javascript:void(0);" title="" class="font_i ranklist_body_play"
+                            onclick="listSongPlay({{value.id}},0)"></a>
+                        <a href="/#/song?id={{value.id}}" class="songDataName"
+                            onclick="getSong({{value.id}})">{{value.al.name}}</a>
+                        <a href="javascript:void(0);" class="songDataNickname">{{value.ar[0].name}}</a>
+                        <span class="songDateTime">00:00</span>
+                    </li>
+                    {{else if key > 3}}
+                    <li>
+                        <span class="songDataIndex">{{key+1}}<i></i></span>
+                        <a href="javascript:void(0);" title="{{value.al.name}}" class="font_i ranklist_body_play"
+                            onclick="listSongPlay({{value.id}},0)"></a>
+                        <a href="/#/songid={{value.id}}" class="songDataName"
+                            onclick="getSong({{value.id}})">{{value.al.name}}</a>
+                        <a href=" javascript:void(0);" class="songDataNickname">{{value.al.name}}</a>
+                        <span class="songDateTime">00:00</span>
+                    </li>
+                    {{/if}}
+
+                    {{/each}}
+                </script>
+            </div>
+            <div class="ranklist_body_header">
+                <h2>评论</h2>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="/public/js/index/index_rankinglist.js"></script>
+<!------------------- end ----------------------->

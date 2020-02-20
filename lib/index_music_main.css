@@ -1,0 +1,646 @@
+@font-face {
+    /*声明字体*/
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body {
+    background-color: #f5f5f5;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(75, 72, 72);
+}
+
+a:hover {
+    text-decoration: underline solid rgb(114, 112, 112);
+}
+
+.mark {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 4;
+    display: none;
+}
+
+.login_lis span {
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+
+
+.h_hot {
+    position: fixed;
+    right: 100px;
+    top: 400px;
+    width: 40px;
+    height: 40px;
+    color: #383838;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    border: #959595 1px solid;
+    border-radius: 3px;
+    font-family: 'icomoon'
+}
+
+.go:hover {
+    background-color: #ccc;
+}
+
+.header {
+    height: 70px;
+    background-color: #242424;
+    position: relative;
+}
+
+.header a {
+    color: rgb(151, 150, 150);
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 160px;
+    height: 35px;
+    background: url(../images/topbar.png) no-repeat;
+    background-position: 0 -19px;
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    left: 125px;
+}
+
+.leader {
+    margin-left: 300px;
+    position: relative;
+}
+
+.leader li a {
+    float: left;
+    padding: 25px 20px;
+}
+
+.leader li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.leader .leader_hot {
+    width: 26px;
+    height: 13px;
+    position: absolute;
+    left: 510px;
+    top: 18px;
+    background: url(../images/topbar.png) no-repeat;
+    background-position: -191px 0;
+}
+
+.leader .leader_arrow {
+    width: 13px;
+    height: 6px;
+    position: absolute;
+    left: 40px;
+    top: 64px;
+    background: url(../images/topbar.png) no-repeat;
+    background-position: -226px 0;
+}
+
+.h_search {
+    float: left;
+    height: 35px;
+    width: 160px;
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+    margin: 17px 10px 18px 90px;
+}
+
+.sch {
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    background: url(../images/topbar.png) no-repeat;
+    background-position: -9px -107px;
+    cursor: pointer;
+}
+
+.h_search input {
+    font-size: 12px;
+    height: 14px;
+    width: 125px;
+    border-style: none;
+    margin: 10px 0;
+    margin-left: 30px;
+    outline: 0;
+}
+
+.h_c a {
+    float: left;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    border: #4f4f4f solid 1px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.h_c a:hover {
+    border-color: #fff;
+}
+
+.h_login {
+    float: left;
+    width: 50px;
+    height: 40px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.login_a {
+    display: inline-block;
+    font-size: 12px;
+    position: relative;
+}
+
+.login_a:hover {
+    color: rgb(110, 109, 117);
+}
+
+.login_b {
+    width: 12px;
+    height: 7px;
+    background: url(../images/topbar.png) no-repeat;
+    background-position: -228px -60px;
+    display: inline-block;
+}
+
+.login_lis {
+    height: 176px;
+    width: 150px;
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    background-color: #3b3b3b;
+    display: none;
+    z-index: 2;
+}
+
+.login_lis a {
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.login_lis li {
+    padding-left: 15px;
+    height: 35px;
+}
+
+.login_lis span,
+.login_lis a {
+    line-height: 35px;
+}
+
+.login_lis li:hover {
+    background-color: rgb(133, 133, 133);
+}
+
+/* **********login-m window ************/
+.m_login {
+    position: relative;
+    width: 530px;
+    background-color: #fff;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgb(44, 43, 43);
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    display: none;
+    z-index: 5;
+}
+
+.m_login .m_top {
+    background-color: #242424;
+    width: 530px;
+    height: 38px;
+    cursor: move;
+}
+
+.m_top_title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 38px;
+    padding-left: 15px;
+}
+
+.m_login .m_login_close {
+    font-family: 'icomoon';
+    font-size: 12px;
+    color: #f5f5f5;
+    font-weight: 100;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.m_login_post {
+    width: 530px;
+    height: 225px;
+    border-bottom: #686666 1px solid;
+}
+
+.m_login_form {
+    width: 220px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+
+.m_input input {
+    width: 220px;
+    height: 30px;
+    border-style: none;
+    border: #ccc 1px solid;
+    margin: 0 0 15px 0;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.m_check .check {
+    margin-right: 5px;
+    border-style: none;
+}
+
+.lost {
+    float: right;
+    font-size: 12px;
+    color: #3b3b3b;
+}
+
+.lost:hover {
+    text-decoration: underline solid rgb(150, 147, 147);
+}
+
+.btn {
+    display: block;
+    width: 218px;
+    height: 29px;
+    line-height: 29px;
+    border: rgb(97, 87, 87) 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(29, 109, 163);
+}
+
+.btn:hover {
+    background-color: rgb(26, 137, 200);
+}
+
+.login_bottom {
+    width: 530px;
+    height: 60px;
+    background-color: rgb(211, 209, 209);
+    line-height: 60px;
+
+}
+
+.login_bottom_l {
+    color: rgb(29, 109, 163);
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.login_bottom_r {
+    color: #525050;
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+/* **********login-e window ************/
+.e_login {
+    position: relative;
+    width: 530px;
+    background-color: #fff;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgb(44, 43, 43);
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    display: none;
+    z-index: 5;
+}
+
+.e_login .e_top {
+    background-color: #242424;
+    width: 530px;
+    height: 38px;
+    cursor: move;
+}
+
+.e_top_title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 38px;
+    padding-left: 15px;
+}
+
+.e_login .e_login_close {
+    font-family: 'icomoon';
+    font-size: 12px;
+    color: #f5f5f5;
+    font-weight: 100;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.e_login_post {
+    width: 530px;
+    height: 225px;
+    border-bottom: #686666 1px solid;
+}
+
+.e_login_form {
+    width: 220px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+
+.e_input input {
+    width: 220px;
+    height: 30px;
+    border-style: none;
+    border: #ccc 1px solid;
+    margin: 0 0 15px 0;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.e_check .check {
+    margin-right: 5px;
+    border-style: none;
+}
+
+.lost {
+    float: right;
+    font-size: 12px;
+    color: #3b3b3b;
+}
+
+.lost:hover {
+    text-decoration: underline solid rgb(150, 147, 147);
+}
+
+.btn {
+    display: block;
+    width: 218px;
+    height: 29px;
+    line-height: 29px;
+    border: rgb(97, 87, 87) 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(29, 109, 163);
+}
+
+.btn:hover {
+    background-color: rgb(26, 137, 200);
+}
+
+.login_bottom {
+    width: 530px;
+    height: 60px;
+    background-color: rgb(211, 209, 209);
+    line-height: 60px;
+
+}
+
+.login_bottom_l {
+    color: rgb(29, 109, 163);
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.login_bottom_r {
+    color: #525050;
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+/**************register window ***********/
+.register {
+    position: relative;
+    width: 530px;
+    background-color: #fff;
+    border: 1px solid #242424;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgb(44, 43, 43);
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    display: none;
+    z-index: 5;
+}
+
+.register .r_top {
+    background-color: #242424;
+    width: 530px;
+    height: 38px;
+    cursor: move;
+}
+
+.r_top_title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 38px;
+    padding-left: 15px;
+}
+
+.register .r_login_close {
+    font-family: 'icomoon';
+    font-size: 12px;
+    color: #f5f5f5;
+    font-weight: 100;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.r_login_post {
+    width: 530px;
+    height: 225px;
+    border-bottom: #686666 1px solid;
+}
+
+.r_login_form {
+    width: 220px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.r_input_s {
+    font-size: 12px;
+    color: #3b3b3b;
+    line-height: 35px;
+}
+
+.r_input input {
+    width: 220px;
+    height: 30px;
+    border-style: none;
+    border: #ccc 1px solid;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.r_check .check {
+    margin-right: 5px;
+    border-style: none;
+}
+
+.lost {
+    float: right;
+    font-size: 12px;
+    color: #3b3b3b;
+}
+
+.lost:hover {
+    text-decoration: underline solid rgb(150, 147, 147);
+}
+
+.btn {
+    display: block;
+    width: 218px;
+    height: 29px;
+    line-height: 29px;
+    border: rgb(97, 87, 87) 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(29, 109, 163);
+}
+
+.btn:hover {
+    background-color: rgb(26, 137, 200);
+}
+
+.login_bottom {
+    width: 530px;
+    height: 60px;
+    background-color: rgb(211, 209, 209);
+    line-height: 60px;
+
+}
+
+.login_bottom_l {
+    color: rgb(29, 109, 163);
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.login_bottom_r {
+    color: #525050;
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+
+hr {
+    width: 100%;
+    height: 5px;
+    background-color: #9b0909;
+}
+
+main {
+    width: 980px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-left: 1px rgb(173, 173, 173) solid;
+    border-right: 1px rgb(214, 213, 213) solid;
+}
+
+h1 {
+    height: 120px;
+    line-height: 120px;
+    text-align: right;
+    width: 850px;
+}
+
+.user_music_bgimg {
+    width: 980px;
+    height: 451px;
+    background: url(../images/user_music_bgimage.jpg) no-repeat;
+}
+
+.uer_music_main_btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    width: 167px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: block;
+    margin-left: 680px;
+    margin-top: 150px;
+    border: #666 1px solid;
+    border-radius: 5px;
+    background-color: rgb(5, 8, 182);
+}
+
+.uer_music_main_btn:hover {
+    background-color: rgb(11, 7, 250);
+}

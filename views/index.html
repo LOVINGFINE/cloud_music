@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AN_fine</title>
+    <link rel="icon" href="/public/images/favicon.ico" mce_href="/public/images/favicon.ico" type="image/x-icon">
+    <script src="/lib/jquery-3.4.1.js"></script>
+    <script src="/lib/template-web.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/public/js/header.js"></script>
+    <script src="/public/js/play_music.js"></script>
+    <script src="/public/js/index/index.js"></script>
+    <script src="/public/js/index/index_init.js"></script>
+    <link rel="stylesheet" href="/public/css/indexs/index_header.css">
+    <link rel="stylesheet" href="/public/css/play_music_box.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_recommend.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_musiclist.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_DJstation.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_rankinglist.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_vocalist.css">
+    <link rel="stylesheet" href="/public/css/indexs/index_newAlbum.css">
+    <link rel="stylesheet" href="/public/css/musicListDetail.css">
+    <link rel="stylesheet" href="/public/css/songs_window.css">
+    <link rel="stylesheet" href="/public/css/indexs/search.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="#" class="h_hot"><br>TOP</a>
+            <a href="/" class="logo"></a>
+            <ul class="leader">
+                <li class="header_li"><a id="header_find" class="header_btn" href="/">发现音乐</a></li>
+                <li class="header_li"><a id="header_mymusic" class="header_btn" href="#">我的音乐</a></li>
+                <li class="header_li"><a id="header_friend" class="header_btn" href="#">朋友</a></li>
+                <li class="header_li"><a id="header_maket" class="header_btn" href="#">商城</a></li>
+                <li class="header_li"><a id="header_musicPerson" class="header_btn" href="#">音乐人</a></li>
+                <li class="header_li"><a id="header_dowload" class="header_btn" href="#">下载客户端</a></li>
+                <li class="header_li">
+                    <div class="leader_hot"></div>
+                </li>
+                <li class="header_li">
+                    <div class="leader_arrow" id="leader_arrow"></div>
+                </li>
+            </ul>
+            <div class="header_search">
+                <a href="javascript:void(0);" class="sch" id="seach_btn"></a><input type="text"
+                    value="音乐/视频/电台/用户" id="search">
+            </div>
+            <div class="header_c"><a href="javascript:void(0);" id="header_c">创作者中心</a></div>
+            <div class="header_login">
+                <img src="" alt="" id="admin_avator">
+                <a href="#" id="login_a">登录</a>
+                <div id="login_b"></div>
+                <div id="login_lis">
+                    <ul>
+                        <li>
+                            <span class="index_icomoon"></span><a href="javascript:void(0);" class="m_login"> 手机号登录</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#"> 微信登录</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#"> QQ登录</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#"> 新浪微博登录</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" class="m_login"> 网易邮箱登录</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="index_adminLis">
+                    <ul>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_myHome"> 我的主页</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_myMessage"> 我的消息</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_myLev"> 我的等级</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_vip"> VIP会员</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_setting"> 个人设置</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_"> 实名认证</a>
+                        </li>
+                        <li>
+                            <span class="index_icomoon"></span><a href="#" id="admin_out"> 退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-------- 透明罩层 ------>
+        <div class="mark"></div>
+        <!--------------- 登录/注册窗口 ----------->
+        <div id="m_login">
+            <div class="m_top" id="m_top_move">
+                <div id="m_top_title">手机号登陆</div>
+            </div>
+            <span class="m_login_close" id="m_login_close"></span>
+            <div class="m_login_post">
+                <form action="" method="" role="form" class="m_login_form" id="login_cellphone">
+                    <div class="m_input">
+                        <input type="text" id="phone" placeholder="请输入手机号" name="phone">
+                    </div>
+                    <div class="m_input">
+                        <input type="password" id="password" placeholder="请输入密码" name="password">
+                    </div>
+                    <div class="m_check">
+                        <label for="" class="label"><input type="checkbox" name="" id="" class="check"> 自动登录</label> <a
+                            href="javascript:void(0);" class="lost">忘记密码？</a>
+                    </div>
+                    <button type="button" class="btn" id="login_phone">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                </form>
+            </div>
+            <div id="login_bottom">
+                <a href="javascript:void(0);" id="login_bottom_l">&lt; 其他方式登录</a>
+                <a href="javascript:void(0);" id="login_bottom_r">没有账号?免费注册 &gt;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- top部分 -->
+    <div class="top">
+        <ul class="t_nav">
+            <li><a onclick="getTarget(1)" href="/#/index" id="index_recommend">推荐</a></li>
+            <li><a onclick="getTarget(2,19723756)" href="/#/rankingList?id=19723756" id="index_rankinglist">排行榜</a></li>
+            <li><a onclick="getTarget(3,'全部')" href="/#/musiclist?cat=全部" id="index_musiclist">歌单</a></li>
+            <li><a onclick="getTarget(4)" href="/#/DJstation" id="index_DJstation">主播电台</a></li>
+            <li><a onclick="getTarget(5)" href="/#/vocalist" id="index_vocalist">歌手</a></li>
+            <li><a onclick="getTarget(6)" href="/#/newAlbum" id="index_newAlbum">新碟上架</a></li>
+        </ul>
+    </div>
+    <!----------------------------end------------------------------->
+    <div id="index_main">
+
+    </div>
+    <footer>
+        <div class="f_main">
+            <div class="f_link">
+                <p class="f_list">
+                    <a href="">服务条款</a>
+                    <span>|</span>
+                    <a href="">隐私政策</a>
+                    <span>|</span>
+                    <a href="">版权投诉指引</a>
+                    <span>|</span>
+                    <a href="">意见反馈</a>
+                    <span>|</span>
+                </p>
+                <p class="f_sep">
+                    <span>网易公司版权所有©1997-2019</span>&nbsp;&nbsp;&nbsp;<span>杭州乐读科技有限公司运营：</span><a
+                        href="">浙网文[2018]3506-263号</a>
+                </p>
+                <p class="f_bt">
+                    <span>违法和不良信息举报电话：0571-89853516</span>&nbsp;&nbsp;&nbsp;<span> 举报邮箱：</span><a
+                        href="">ncm5990@163.com</a>
+                </p>
+            </div>
+            <ul class="f_enter">
+                <li><a href="" class="footer_icon"></a><span>用户认证</span></li>
+                <li><a href="" class="footer_icon"></a><span>独立音乐人</span></li>
+                <li><a href="" class="footer_icon"></a><span>赞赏</span></li>
+                <li><a href="" class="footer_icon"></a><span>视频奖励</span></li>
+            </ul>
+        </div>
+    </footer>
+    <!---------------- 播放器 ----------------------->
+    <div class="play_music_box">
+        <!-- 播放器锁 -->
+        <div class="box_showHide">
+            <div id="box_lock"></div>
+        </div>
+        <audio id="audioTag" src="" ontimeupdate="timeUpdate(this)" onseeked="changeDate(this)">
+        </audio>
+        <div class="box_playMusicBody">
+            <div class="music_play_base">
+                <div class="change_song">
+                    <!-- 播放控制 -->
+                    <a href="javascript:;" id="prev_song" title="上一首"></a>
+                    <a href="javascript:;" id="play-stop" title="播放/暂停"></a>
+                    <a href="javascript:;" id="next_song" title="下一首"></a>
+                </div>
+                <!-- 图片 -->
+                <img src="" alt="" id="play_songImg">
+                <!-- 歌曲信息 -->
+                <div class="song_message">
+                    <div class="play_songTitle">
+                        <!-- 歌曲名称 -->
+                        <a href="javascript:;" class="play_song_name" id="play_song_name">loving_fine</a>
+                        <a href="javascript:;" id="play_song_nickname">ahjahjdhajdhjk</a>
+                    </div>
+                    <!-- 进度条 -->
+                    <div id="song_progress">
+                        <div id="progress"><button class="icomoon_a" id="songDot"></button></div>
+                    </div>
+                    <!-- 播放时间/总时长 -->
+                    <p class="play_songTime"><em id="song_currentTime">00:00</em> / <span id="song_time">00:00</span>
+                    </p>
+                </div>
+                <!-- 收藏分享 -->
+                <div class="play_songCollFw">
+                    <a href="javascript:;" id="play_songCollection" class="icomoon_a"></a>
+                    <a href="javascript:;" id="play_songForwarding" class="icomoon_a"></a>
+                </div>
+                <!-- 播放器设置 -->
+                <div class="play_control_panel">
+                    <a href="javascript:;" id="play_voice" class="icomoon_a" title="声音+/—"></a>
+                    <a href="javascript:;" id="play_type" class="icomoon_a" title="点击切换"></a>
+                    <div class="valume_song">
+                        <div class="valume_max"><span id="valume_change"><button id="valume_col"></button></span>
+                        </div>
+                    </div>
+
+                    <div class="playsongs_list">
+                        <a href="javascript:;" id="play_songslist" class="icomoon_a" title="歌曲列表"></a>
+                        <span id="songsNumber"></span>
+                        <!-- 播放列表 -->
+                        <div class="play_lists" id="play_lists">
+                            <div class="listsheader">
+                                <div class="listsheader_left">
+                                    <h3>播放列表</h3><span id="playList_songsNumber"></span>
+                                    <div class="listsheader_left_tool">
+                                        <a href="javascript:void(0);" class="playlists_collAll icomoon_a2">
+                                            收藏全部</a>
+                                        <a href="javascript:void(0);" class="icomoon_a2" id="removeLists"> 清除</a>
+                                    </div>
+                                </div>
+                                <div class="listsheader_right">
+                                    <span id="song_name_title"></span>
+                                    <i class="icomoon_a2" id="close_list"></i>
+                                </div>
+                            </div>
+                            <div class="playlists_body_left">
+                                <ul id="songslist"></ul>
+                                <script id="songslist_template" type="text/html">
+                                    {{each data value key}}
+                                    <li>
+                                        <span class="body_songname" title="{{value.name}}"
+                                            onclick="listSongPlay({{value.id}},1)">
+                                            {{value.name}}
+                                        </span>
+                                        <div class="song_tool">
+                                            <span class="icomoon_a2"></span>
+                                            <span class="icomoon_a2"></span>
+                                            <span class="icomoon_a2"></span>
+                                            <span class="icomoon_a2" onclick="removeSong({{key}})"></span>
+                                        </div>
+                                        <div class="body_li_concarl">
+                                            <span class="song_nickname">
+                                                {{value.ar[0].name}}
+                                            </span>
+                                            <em>
+                                                00:00
+                                            </em>
+                                            <a href="" class="song_link icomoon_a2"></a>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </script>
+                            </div>
+                            <div id="playlists_body_right">
+                                <ul id="lrcBody">
+
+                                </ul>
+                                <script type="text/html" id="lrcBody_temp">
+                                    {{each data value key}}
+                                    <li class="bodyLyric_listItem">{{value.c}}</li>
+                                    {{/each}}
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------- end ----------------------->
+</body>
+
+</html>

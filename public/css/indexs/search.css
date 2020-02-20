@@ -1,0 +1,398 @@
+.search_top {
+    height: 120px;
+    width: 900px;
+    margin: 0 auto;
+    padding: 50px 0 0 240px;
+    box-sizing: border-box;
+}
+
+#search_input {
+    width: 320px;
+    height: 40px;
+    float: left;
+    border: none;
+    padding-left: 10px;
+    border: #9999 1px solid;
+    box-sizing: border-box;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    font-size: 14px;
+    line-height: 40px;
+    color: #999;
+}
+
+#search_top {
+    font-size: 18px;
+    color: #999;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: #9999 1px solid;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    box-sizing: border-box;
+    background-color: rgb(240, 235, 235);
+}
+
+#search_top:hover {
+    text-decoration: none;
+    background-color: rgb(216, 213, 213);
+}
+/* 点击换页 */
+#get_changeNext,
+#get_changePrev {
+    background-color: rgb(241, 240, 240);
+    border-style: none;
+    float: left;
+    width: 71px;
+    height: 26px;
+    line-height: 26px;
+    border: rgb(187, 185, 185) 1px solid;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.pageHide {
+    display: none;
+}
+.dots {
+    font-size: 12px;
+    color: #333;
+    float: left;
+    padding: 0 0 0 4px;
+    line-height: 24px;
+}
+
+#get_changePrev:hover {
+    background-color: rgb(226, 223, 223);
+}
+
+#get_changeNext:hover {
+    background-color: rgb(226, 223, 223);
+}
+#pageNumber .pageRed {
+    background-color: rgb(165, 37, 37);
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.search_result {
+    width: 900px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+}
+
+#search_result_p {
+    display: inline;
+    color: #999;
+    font-size: 12px;
+}
+
+.search_body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#search_number {
+    font-style: normal;
+    color: rgb(233, 18, 18);
+    padding: 0 3px;
+}
+
+.search_nav {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    border-left: #9999 solid 1px;
+    border-right: #9999 solid 1px;
+    box-sizing: border-box;
+}
+
+.search_navItem {
+    float: left;
+    border-top: 2px solid #9999;
+    border-bottom: 1px solid #9999;
+    height: 100%;
+    width: 12.5%;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    background-color: rgb(245, 244, 244);
+    cursor: pointer;
+}
+
+.search_navItem a {
+    color: #999;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.search_navItem a:hover {
+    text-decoration: none;
+}
+
+.search_navItem:hover {
+    border-top: 2px solid rgb(212, 9, 9);
+}
+
+.search_bodyShow {
+    width: 100%;
+    margin-top: 25px;
+    padding-bottom: 60px;
+}
+
+.search_bodyUl {
+    width: 100%;
+}
+
+.search_bodyOneItem {
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border: #fff solid 1px;
+    position: relative;
+}
+.search_bodyOneItem:nth-child(30n) {
+    margin-bottom: 30px;
+}
+
+.search_bodyOneItem:nth-child(2n) {
+    background-color: rgb(245, 241, 241);
+}
+
+/* 导航栏变色 */
+.navItem_change a {
+    border-right: 1px solid #9999;
+    background-color: rgb(149, 7, 7);
+    color: #fff;
+}
+
+.search_bodyOneItem:hover {
+    background-color: rgb(243, 242, 242);
+    border: #9999 solid 1px;
+    border-radius: 3px;
+
+}
+
+.search_bodyOneItem:hover .search_methd {
+    display: block;
+}
+
+.search_playSong {
+    line-height: 43px;
+    font-size: 18px;
+    color: rgb(129, 126, 126);
+    float: left;
+}
+
+.search_playSong:hover {
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+}
+
+.search_songName {
+    line-height: 43px;
+    padding-left: 12px;
+    float: left;
+    width: 320px;
+    margin-right: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search_methd {
+    float: left;
+    width: 160px;
+    height: 100%;
+    position: absolute;
+    left: 370px;
+    display: none;
+}
+
+.search_songNickname {
+    float: left;
+    line-height: 43px;
+    width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search_songAlbum {
+    width: 120px;
+    float: left;
+    line-height: 43px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search_songTime {
+    font-size: 12px;
+    color: rgb(87, 84, 84);
+    float: left;
+    line-height: 43px;
+    padding-left: 30px;
+    width: 79px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.search_methd a {
+    font-size: 16px;
+    color: #999;
+    line-height: 43px;
+    margin-left: 15px;
+}
+
+.search_methd a:hover {
+    color: #333;
+}
+
+.search_bodyTwoItem {
+    width: 130px;
+    height: 200px;
+    float: left;
+    margin: 0 24px 12px 0;
+}
+
+.search_bodyTwoItem:nth-child(6n) {
+    margin-right: 0;
+}
+
+.search_bodyTwoItem_img {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.search_bodyTwoItem_name {
+    display: block;
+    font-size: 14px;
+    width: 100px;
+    color: #333;
+    line-height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 专辑部分 */
+.search_bodyThreeItem {
+    width: 153px;
+    height: 210px;
+    float: left;
+    margin: 0 30px 10px 0;
+}
+.search_bodyThreeItem:nth-child(5n){
+    margin-right: 0;
+}
+
+.search_bodyThreeItem_link {
+    display: block;
+    position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 130px;
+    background: url(/public/images/coverall.png) no-repeat;
+}
+
+.search_bodyThreeItem_img {
+    display: block;
+    height: 130px;
+    width: 130px;
+    box-sizing: border-box;
+}
+
+.search_bodyThreeItem_play {
+    font-size: 24px;
+    position: absolute;
+    display: none;
+    bottom: 20px;
+    right: 36px;
+    color: rgb(73, 72, 72);
+}
+.search_bodyThreeItem_play:hover {
+    color: #000;
+}
+
+.search_bodyThreeItem_link:hover .search_bodyThreeItem_play {
+    display: block;
+}
+.search_bodyThreeItem_name {
+    display: block;
+    width: 100%;
+    line-height: 22px;
+    font-size: 14px;
+    color: rgb(34, 34, 34);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.search_bodyThreeItem_nickname {
+    font-size: 13px;
+    color: rgb(87, 86, 86);
+}
+/* mv */
+.search_bodyFourItem {
+    width: 159px;
+    height: 177px;
+    float: left;
+    margin-right: 26px;
+}
+.search_bodyFourItem:nth-child(5n) {
+    margin-right: 0;
+}
+.search_bodyFourItem_link {
+    width: 100%;
+    height: 90px;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+.search_bodyFourItem_img {
+    width: 100%;
+    height: 90px;
+    display: block;
+}
+.search_bodyFourItem_play {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    padding: 0 0 0 5px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background-color: rgba(59, 59, 59, 0.3);
+    border-radius: 0 0 0 6px;
+    right: 0;
+    top: 0;
+}
+.search_bodyFourItem_name {
+    font-size: 14px;
+    color:#333;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.search_bodyFourItem_nickname{
+    color: rgb(78, 78, 78);
+    font-size: 13px;
+}

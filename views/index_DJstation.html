@@ -1,0 +1,259 @@
+<!----------------- 主页电台部分 ----------------->
+    <main class="clearfloat">
+        <div class="djstation_nav">
+            <a href="javascript:void(0);" title="上一页" class="djstation_nav_left"></a>
+            <a href="javascript:void(0);" title="下一页" class="djstation_nav_right"></a>
+            <span class="djstation_nav_one"></span>
+            <span class="djstation_nav_two"></span>
+            <ul id="djstation_nav_one">
+            </ul>
+            <ul id="djstation_nav_two">
+            </ul>
+            <!-- 电台分类模板 -->
+            <script id="djstation_navOne_template" type="text/html">
+                {{each categories value key}}
+                {{if key < 18}}
+                <li class="djstation_navItem">
+                    <a href="javascript:void(0);" class="djstation_navLink" onclick="getDjStation({{value.id}})">
+                        <img src="{{value.pic56x56Url}}" class="djstation_navImg">
+                        <span class="djstation_navName">{{value.name}}</span>
+                    </a>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+            <script id="djstation_navTwo_template" type="text/html">
+                {{each categories value key}}
+                {{if key > 17}}
+                <li class="djstation_navItem">
+                    <a href="javascript:void(0);" class="djstation_navLink" onclick="getDjStation({{value.id}})">
+                        <img src="{{value.pic56x56Url}}" class="djstation_navImg">
+                        <span class="djstation_navName">{{value.name}}</span>
+                    </a>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyOne">
+            <div class="djstationOne_left">
+                <div class="djstationOne_title">
+                    <h2>推荐节目</h2>
+                    <a href="javascript:void(0);" class="djstation_more" id="djstationOne_left_more">更多&gt;</a>
+                </div>
+                <ul id="djstationOne_body_left">
+
+                </ul>
+                <script id="djstationOne_bodyLeft_template" type="text/html">
+                    {{each programs value key}}
+                    <li class="djstationOne_item">
+                        <img src="{{value.coverUrl}}" alt="" title="{{value.description}}"
+                            class="djstationOne_body_itemImg">
+                        <p class="djstationOne_body_itemMess">
+                            <a href="" class="djstation_body_itemName">{{value.name}}</a>
+                            <a href="" class="djstation_body_itemNickname">{{value.dj.brand}}</a>
+                        </p>
+                        <a href="" class="djstation_bodyLeft_itemLink">{{value.radio.category}}</a>
+                    </li>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="djstationOne_right">
+                <div class="djstationOne_title">
+                    <h2>节目排行榜</h2>
+                    <a href="javascript:void(0);" class="djstation_more" id="djstationOne_left_more">更多&gt;</a>
+                </div>
+                <ul id="djstationOne_body_right">
+
+                </ul>
+                <script id="djstationOne_bodyRight_template" type="text/html">
+                    {{each djRadios value key}}
+                    {{if key < 3 }}
+                    <li class="djstationOne_item">
+                        <div class="djstationOne_right_rank">
+                            <em class="djstationOne_right_rankNew hotColor">0{{key + 1}}</em>
+                            <i class="djstationOne_right_rankUp"></i>
+                        </div>
+                        <img src="{{value.picUrl}}" alt="" title="{{value.name}}" class="djstationOne_body_itemImg">
+                        <p class="djstationOne_body_itemMess">
+                            <a href="" class="djstation_body_itemName">{{value.name}}</a>
+                            <a href="" class="djstation_body_itemNickname">{{value.dj.nickname}}</a>
+                        </p>
+                        <span class="djstationOne_right_itemPct"><i class="djstationOne_right_itemPctNew"
+                                style="width:{{value.subCount/5000}}px"></i></span>
+                    </li>
+                    {{else if key < 9}}
+                    <li class="djstationOne_item">
+                        <div class="djstationOne_right_rank">
+                            <em class="djstationOne_right_rankNew">0{{key + 1}}</em>
+                            <i class="djstationOne_right_rankUp"></i>
+                        </div>
+                        <img src="{{value.picUrl}}" alt="" title="{{value.name}}" class="djstationOne_body_itemImg">
+                        <p class="djstationOne_body_itemMess">
+                            <a href="" class="djstation_body_itemName">{{value.name}}</a>
+                            <a href="" class="djstation_body_itemNickname">{{value.dj.nickname}}</a>
+                        </p>
+                        <span class="djstationOne_right_itemPct"><i class="djstationOne_right_itemPctNew"
+                                style="width:{{value.subCount/5000}}px"></i></span>
+                    </li>
+                    {{else key > 8}}
+                    <li class="djstationOne_item">
+                        <div class="djstationOne_right_rank">
+                            <em class="djstationOne_right_rankNew">{{key + 1}}</em>
+                            <i class="djstationOne_right_rankUp"></i>
+                        </div>
+                        <img src="{{value.picUrl}}" alt="" title="{{value.name}}" class="djstationOne_body_itemImg">
+                        <p class="djstationOne_body_itemMess">
+                            <a href="" class="djstation_body_itemName">{{value.name}}</a>
+                            <a href="" class="djstation_body_itemNickname">{{value.dj.nickname}}</a>
+                        </p>
+                        <span class="djstationOne_right_itemPct"><i class="djstationOne_right_itemPctNew"
+                                style="width:{{value.subCount/5000}}px"></i></span>
+                    </li>
+                    {{/if}}
+
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">音乐故事 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodyTwo">
+
+            </ul>
+            <script type="text/html" id="djstation_bodyTwo_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">美文读物 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodyThree">
+
+            </ul>
+            <script type="text/html" id="djstation_bodyThree_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">脱口秀 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodyFour">
+
+            </ul>
+            <script type="text/html" id="djstation_bodyFour_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">情感调频 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodyFive">
+
+            </ul>
+            <script type="text/html" id="djstation_bodyFive_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">创作|翻唱 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodySix">
+
+            </ul>
+            <script type="text/html" id="djstation_bodySix_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+        <div class="djstation_bodyClass">
+            <div class="djstation_bodyTitle">
+                <a href="javascript:void(0);" class="djstation_name" id="distation_musicStory">人文历史 · 电台</a>
+                <a href="javascript:void(0);" class="djstation_more" id="djstationTwo_more">更多&gt;</a>
+            </div>
+            <ul id="djstation_bodySeven">
+
+            </ul>
+            <script type="text/html" id="djstation_bodySeven_template">
+                {{each djRadios value key}}
+                {{if key < 4}}
+                <li class="djstation_bodyClass_item">
+                    <a href="javascript:void(0);"><img src="{{value.picUrl}}" alt="" class="bodyTwo_itemImg"
+                            title="{{value.name}}"></a>
+                    <div class="distation_bodyTwo_message">
+                        <a href="" class="bodyTwo_itemName">{{value.name}}</a>
+                        <span class="bodyTwo_itemMess">{{value.rcmdtext}}</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+    </main>
+    <script src="/public/js/index/index_DJstation.js"></script>
+<!------------------- end ----------------------->
